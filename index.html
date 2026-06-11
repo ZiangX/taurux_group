@@ -51,7 +51,7 @@
 
     .hero{border-bottom:1px solid var(--border)}
     .hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);gap:70px;align-items:center;padding:92px 0 76px}
-    .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin-bottom:28px;display:flex;align-items:center;gap:10px}
+    .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;display:flex;align-items:center;gap:10px}
     .eyebrow::before{content:'';width:20px;height:1px;background:var(--gold);display:inline-block}
     .hero-title{font-family:var(--serif);font-size:70px;font-weight:300;line-height:1.02;letter-spacing:-.025em;max-width:680px;margin-bottom:30px;color:var(--black)}
     .hero-title em{font-style:italic;color:var(--black)}
@@ -78,7 +78,7 @@
     section{border-bottom:1px solid var(--border)}
     .sec{padding:82px 0}
     .sec-head{max-width:760px;margin-bottom:44px}
-    .sec-tag{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mid);margin-bottom:24px;display:flex;align-items:center;gap:10px}
+    .sec-tag{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:10px}
     .sec-tag::after{content:'';display:inline-block;width:32px;height:1px;background:var(--border)}
     .sec-title{font-family:var(--serif);font-size:48px;font-weight:300;line-height:1.08;letter-spacing:-.015em;color:var(--black);margin-bottom:20px}
     .sec-title em{font-style:italic}
@@ -101,6 +101,10 @@
     .bridge-pill{font-size:11px;color:var(--mid);border:1px solid var(--border);padding:4px 10px;border-radius:2px;letter-spacing:.04em;text-align:right}
     .bridge-cols{display:grid;grid-template-columns:1fr auto 1fr}
     .bridge-side{padding:30px 28px}
+    .bridge-side.flag-bg{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.88),rgba(255,255,255,.94))}
+    .bridge-side.flag-bg::before{position:absolute;right:18px;bottom:10px;z-index:-1;font-size:118px;line-height:1;opacity:.15;filter:saturate(.95)}
+    .bridge-side.flag-canada::before{content:'🇨🇦'}
+    .bridge-side.flag-china::before{content:'🇨🇳'}
     .bridge-country{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--black);margin-bottom:14px;letter-spacing:.04em}
     .bridge-list{list-style:none}
     .bridge-list li{font-size:12px;font-weight:300;color:var(--mid);line-height:1.65;padding:7px 0;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:8px}
@@ -130,6 +134,10 @@
     .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
     .proof-card{background:var(--white);padding:26px 24px;min-height:155px;display:flex;flex-direction:column;justify-content:space-between;transition:background .16s}
     .proof-card:hover{background:var(--off)}
+    .proof-card.has-bg{position:relative;isolation:isolate;min-height:220px;background-image:linear-gradient(180deg,rgba(10,10,10,.58),rgba(10,10,10,.84)),var(--proof-bg);background-size:cover;background-position:center;color:var(--white);text-shadow:0 1px 12px rgba(0,0,0,.65)}
+    .proof-card.has-bg:hover{background-image:linear-gradient(180deg,rgba(10,10,10,.48),rgba(10,10,10,.76)),var(--proof-bg)}
+    .proof-card.has-bg .proof-name{color:var(--white)}
+    .proof-card.has-bg .proof-text{color:rgba(255,255,255,.82)}
     .proof-name{font-family:var(--serif);font-size:23px;font-weight:400;color:var(--black);line-height:1.05;margin-bottom:12px}
     .proof-meta{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
     .proof-text{font-size:12px;line-height:1.65;color:var(--mid)}
@@ -152,6 +160,8 @@
     .lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:42px}
     .lead-card{border:1px solid var(--border);border-radius:3px;overflow:hidden;background:var(--white)}
     .lead-top{height:160px;background:var(--off);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border)}
+    .lead-top.photo{height:260px;background:var(--black)}
+    .lead-photo{width:100%;height:100%;object-fit:cover;object-position:center 24%;display:block}
     .lead-avatar{width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:22px;font-weight:300;letter-spacing:.04em}
     .lead-avatar.dark{background:var(--black);color:var(--white)}
     .lead-avatar.light{background:var(--white);border:1px solid var(--border);color:var(--black)}
@@ -363,7 +373,7 @@
           <div class="bridge-pill" data-i18n="bridgePill">A Canada–China advantage rooted in Quebec</div>
         </div>
         <div class="bridge-cols">
-          <div class="bridge-side">
+          <div class="bridge-side flag-bg flag-canada">
             <div class="bridge-country" data-i18n="canadaTitle">Canada</div>
             <ul class="bridge-list">
               <li data-i18n="canada1">Local business networks and community</li>
@@ -374,7 +384,7 @@
             </ul>
           </div>
           <div class="bridge-divider"><div class="bridge-icon">↔</div><div class="bridge-note">Taurux<br>Group</div></div>
-          <div class="bridge-side">
+          <div class="bridge-side flag-bg flag-china">
             <div class="bridge-country" data-i18n="chinaTitle">China</div>
             <ul class="bridge-list">
               <li data-i18n="china1">Business networks and strategic relationships</li>
@@ -396,23 +406,16 @@
         <h2 class="sec-title" data-i18n-html="ecoTitle">Five sectors.<br><em>One shared vision.</em></h2>
         <p class="sec-body" data-i18n="ecoBody">Each business inside Taurux Group is distinct in its market, yet connected by the same platform of resources, relationships, and long-term values.</p>
       </div>
-      <div class="eco-grid">
-        <div class="eco-card"><div class="eco-n">01</div><div class="eco-name" data-i18n="eco1Name">Hospitality & Experiences</div><div class="eco-desc" data-i18n="eco1Desc">Premium dining, entertainment, and celebration experiences that bring people together, from intimate evenings to large-scale events.</div><div class="eco-tags"><a class="eco-tag linked" href="https://lanuitshanghai.ca/en" target="_blank" rel="noopener noreferrer">La Nuit Shanghai ↗</a><a class="eco-tag linked" href="https://mitsukisushi.com" target="_blank" rel="noopener noreferrer">Mitsuki ↗</a></div></div>
-        <div class="eco-card"><div class="eco-n">02</div><div class="eco-name" data-i18n="eco2Name">Private Business Club</div><div class="eco-desc" data-i18n="eco2Desc">A curated environment for business leaders and entrepreneurs, built on trust, discretion, and the power of the right relationships.</div><div class="eco-tags"><span class="eco-tag">Black Pearl</span></div></div>
-        <div class="eco-card"><div class="eco-n">03</div><div class="eco-name" data-i18n="eco3Name">Wealth Stewardship</div><div class="eco-desc" data-i18n="eco3Desc">Financial planning, protection, and long-term stewardship for individuals, families, and business owners who build with a generational perspective.</div><div class="eco-tags"><span class="eco-tag">GTJ Wealth Stewardship</span></div></div>
-        <div class="eco-card"><div class="eco-n">04</div><div class="eco-name" data-i18n="eco4Name">Media & Communications</div><div class="eco-desc" data-i18n="eco4Desc">Strategic storytelling and communications that connect brands, businesses, and communities across languages and markets.</div><div class="eco-tags"><span class="eco-tag">Synera</span></div></div>
-        <div class="eco-card full"><div class="eco-n">05</div><div class="eco-name" data-i18n="eco5Name">Education & Development</div><div class="eco-desc" data-i18n="eco5Desc">Through education-related partnerships and development initiatives, Taurux Group supports learning, professional growth, and community advancement.</div><div class="eco-tags"><span class="eco-tag" data-i18n="eco5Tag1">College Partnerships</span><span class="eco-tag" data-i18n="eco5Tag2">Professional Development</span><span class="eco-tag" data-i18n="eco5Tag3">Community Learning</span></div></div>
-      </div>
       <div class="portfolio-proof">
         <div class="proof-intro">
           <div class="proof-kicker" data-i18n="proofKicker">Portfolio Evidence</div>
           <div class="proof-title" data-i18n="proofTitle">Operating platforms that make the ecosystem tangible.</div>
         </div>
         <div class="proof-grid">
-          <a class="proof-card" href="https://lanuitshanghai.ca/en" target="_blank" rel="noopener noreferrer"><div><div class="proof-name">La Nuit Shanghai</div><div class="proof-meta" data-i18n="proof1Meta">Celebration · Cabaret · Events</div></div><div class="proof-text" data-i18n="proof1Text">A premium hospitality and celebration platform in Quartier DIX30.</div></a>
-          <a class="proof-card" href="https://mitsukisushi.com" target="_blank" rel="noopener noreferrer"><div><div class="proof-name">Mitsuki</div><div class="proof-meta" data-i18n="proof2Meta">Hospitality · Market Presence</div></div><div class="proof-text" data-i18n="proof2Text">A long-standing restaurant brand with over a decade of local market presence.</div></a>
-          <div class="proof-card"><div><div class="proof-name">GTJ Wealth Stewardship</div><div class="proof-meta" data-i18n="proof3Meta">Planning · Protection · Stewardship</div></div><div class="proof-text" data-i18n="proof3Text">A long-term wealth stewardship platform serving individuals, families, and business owners.</div></div>
-          <div class="proof-card"><div><div class="proof-name">Black Pearl</div><div class="proof-meta" data-i18n="proof4Meta">Private Business Club</div></div><div class="proof-text" data-i18n="proof4Text">A developing private business club concept built around trust, discretion, and high-value relationships.</div></div>
+          <a class="proof-card has-bg" style="--proof-bg:url('assets/portfolio/la-nuit-shanghai.png')" href="https://lanuitshanghai.ca/en" target="_blank" rel="noopener noreferrer"><div><div class="proof-name">La Nuit Shanghai</div><div class="proof-meta" data-i18n="proof1Meta">Celebration · Cabaret · Events</div></div><div class="proof-text" data-i18n="proof1Text">A premium hospitality and celebration platform in Quartier DIX30.</div></a>
+          <a class="proof-card has-bg" style="--proof-bg:url('assets/portfolio/mitsuki.png')" href="https://mitsukisushi.com" target="_blank" rel="noopener noreferrer"><div><div class="proof-name">Mitsuki</div><div class="proof-meta" data-i18n="proof2Meta">Hospitality · Market Presence</div></div><div class="proof-text" data-i18n="proof2Text">A long-standing restaurant brand with over a decade of local market presence.</div></a>
+          <a class="proof-card has-bg" style="--proof-bg:url('assets/portfolio/rebecca-li.png')" href="https://www.rliconsultant.com/my-bio" target="_blank" rel="noopener noreferrer"><div><div class="proof-name">GTJ Wealth Stewardship</div><div class="proof-meta" data-i18n="proof3Meta">Planning · Protection · Stewardship</div></div><div class="proof-text" data-i18n="proof3Text">A long-term wealth stewardship platform serving individuals, families, and business owners.</div></a>
+          <div class="proof-card has-bg" style="--proof-bg:linear-gradient(135deg,#090909,#24201a 48%,#0d0d0d)"><div><div class="proof-name">Black Pearl</div><div class="proof-meta" data-i18n="proof4Meta">Private Business Club</div></div><div class="proof-text" data-i18n="proof4Text">A developing private business club concept built around trust, discretion, and high-value relationships.</div></div>
         </div>
       </div>
 
@@ -459,7 +462,7 @@
       </div>
       <div class="lead-grid">
         <div class="lead-card"><div class="lead-top"><div class="lead-avatar dark">JL</div></div><div class="lead-body"><div class="lead-name">Jacky Lin</div><div class="lead-role" data-i18n="jackyRole">President & Founder</div><div class="lead-bio" data-i18n="jackyBio">Jacky sets the strategic direction of Taurux Group. He evaluates new ventures, identifies where opportunity meets timing, and builds partnerships that strengthen the group’s ecosystem and long-term growth.</div><span class="lead-badge" data-i18n="jackyBadge">AGA Brossard — Board Director</span></div></div>
-        <div class="lead-card"><div class="lead-top"><div class="lead-avatar light">RL</div></div><div class="lead-body"><div class="lead-name">Rebecca Li</div><div class="lead-role" data-i18n="rebeccaRole">Vice President &amp; Co-Founder</div><div class="lead-bio" data-i18n="rebeccaBio">Rebecca translates strategy into results. She oversees execution, governance, and project implementation across the Taurux portfolio, ensuring that priorities move from planning to accountable delivery.</div></div></div>
+        <div class="lead-card"><div class="lead-top photo"><img class="lead-photo" src="assets/portfolio/rebecca-li.png" alt="Rebecca Li"></div><div class="lead-body"><div class="lead-name">Rebecca Li</div><div class="lead-role" data-i18n="rebeccaRole">Vice President &amp; Co-Founder</div><div class="lead-bio" data-i18n="rebeccaBio">Rebecca translates strategy into results. She oversees execution, governance, and project implementation across the Taurux portfolio, ensuring that priorities move from planning to accountable delivery.</div></div></div>
       </div>
     </div>
   </section>
