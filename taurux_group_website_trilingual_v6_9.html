@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taurux Group | Private Holding Group in Quebec</title>
+  <meta name="description" content="Taurux Group is a private holding group rooted in Quebec, focused on platform building, resource integration, strategic partnerships, and long-term value creation.">
+  <meta property="og:title" content="Taurux Group | Building Platforms. Bridging Resources. Creating Lasting Value.">
+  <meta property="og:description" content="A private holding group rooted in Quebec, focused on platform building, resource integration, strategic partnerships, and long-term value creation.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tauruxgroup.com/assets/taurux-og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="canonical" href="https://tauruxgroup.com/">
+  <link rel="icon" type="image/png" href="assets/taurux-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --black:#0a0a0a;
+      --white:#ffffff;
+      --off:#f8f7f5;
+      --soft:#f2f0ec;
+      --mid:#686868;
+      --border:#e7e4de;
+      --gold:#b89b5e;
+      --deep:#111111;
+      --serif:'Cormorant Garamond',serif;
+      --sans:'DM Sans',sans-serif;
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;font-size:14px;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    .site{width:100%;overflow:hidden}
+    .wrap{width:min(1180px,calc(100% - 56px));margin:0 auto}
+
+    nav{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.98);backdrop-filter:blur(10px);border-bottom:1px solid rgba(184,155,94,.24)}
+    .nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .nav-logo{display:flex;align-items:center;line-height:0;white-space:nowrap}.nav-logo-img{height:48px;width:auto;display:block}
+    .nav-links{display:flex;align-items:center;gap:24px}
+    .nav-link{font-size:11px;color:rgba(255,255,255,.64);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:color .18s}
+    .nav-link:hover{color:var(--white)}
+    .nav-right{display:flex;align-items:center;gap:18px}
+    .lang-switch{display:flex;border:1px solid rgba(255,255,255,.16);border-radius:999px;overflow:hidden;background:rgba(255,255,255,.04)}
+    .lang-btn{font-family:var(--sans);border:0;background:transparent;color:rgba(255,255,255,.62);font-size:11px;letter-spacing:.04em;padding:7px 10px;cursor:pointer;border-right:1px solid rgba(255,255,255,.14)}
+    .lang-btn:last-child{border-right:0}
+    .lang-btn.active{background:var(--gold);color:var(--black)}
+    .nav-cta{font-size:12px;font-weight:600;color:var(--black);background:var(--gold);padding:10px 18px;border-radius:2px;cursor:pointer;letter-spacing:.03em;border:0;font-family:var(--sans);white-space:nowrap}
+
+    .hero{border-bottom:1px solid var(--border)}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);gap:70px;align-items:center;padding:92px 0 76px}
+    .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin-bottom:28px;display:flex;align-items:center;gap:10px}
+    .eyebrow::before{content:'';width:20px;height:1px;background:var(--gold);display:inline-block}
+    .hero-title{font-family:var(--serif);font-size:70px;font-weight:300;line-height:1.02;letter-spacing:-.025em;max-width:680px;margin-bottom:30px;color:var(--black)}
+    .hero-title em{font-style:italic;color:var(--black)}
+    .hero-sub{font-size:15px;font-weight:300;line-height:1.9;color:var(--mid);max-width:620px;margin-bottom:38px}
+    .hero-actions{display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin-bottom:54px}
+    .btn-p{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--white);background:var(--black);border:0;padding:13px 28px;border-radius:2px;letter-spacing:.03em;cursor:pointer;transition:opacity .18s}
+    .btn-p:hover{opacity:.86}
+    .btn-s{font-family:var(--sans);font-size:13px;font-weight:400;color:var(--black);background:transparent;border:0;border-bottom:1px solid var(--black);padding:13px 0;letter-spacing:.03em;cursor:pointer}
+    .trust-row{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);padding-top:30px;gap:0}
+    .trust-item{padding-right:22px;margin-right:22px;border-right:1px solid var(--border)}
+    .trust-item:last-child{border-right:0;margin-right:0;padding-right:0}
+    .trust-num{font-family:var(--serif);font-size:34px;font-weight:300;line-height:1;color:var(--black)}
+    .trust-label{font-size:11px;color:var(--mid);margin-top:7px;line-height:1.5}
+
+    .symbol-card{background:linear-gradient(145deg,#0a0a0a,#1a1917);color:var(--white);min-height:500px;border-radius:3px;position:relative;overflow:hidden;padding:44px;display:block;box-shadow:0 28px 70px rgba(0,0,0,.10)}
+    .symbol-card::before{content:'';position:absolute;width:430px;height:430px;border:1px solid rgba(184,155,94,.20);border-radius:50%;top:42px;right:-150px;transform:rotate(-18deg)}
+    .symbol-card::after{content:'';position:absolute;width:310px;height:310px;border:1px solid rgba(255,255,255,.045);border-radius:50%;top:118px;right:-70px;transform:rotate(20deg)}
+    .symbol-mark{position:absolute;z-index:1;right:42px;top:50%;transform:translateY(-48%);width:min(320px,54%);height:auto;border:0;border-radius:0;display:block}.symbol-mark img{display:block;width:100%;height:auto;filter:drop-shadow(0 18px 30px rgba(0,0,0,.30))}
+    .symbol-line{position:absolute;z-index:0;width:62%;height:1px;background:linear-gradient(90deg,transparent,rgba(184,155,94,.42),transparent);top:58%;left:27%;transform:rotate(-22deg)}
+    .symbol-bottom{position:absolute;z-index:2;left:46px;bottom:72px;width:min(230px,40%)}
+    .symbol-title{font-family:var(--serif);font-size:30px;font-weight:300;line-height:1.15;margin-bottom:14px;color:var(--white)}
+    .symbol-body{font-size:12.5px;line-height:1.8;color:#aaa;max-width:230px}
+
+    section{border-bottom:1px solid var(--border)}
+    .sec{padding:82px 0}
+    .sec-head{max-width:760px;margin-bottom:44px}
+    .sec-tag{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mid);margin-bottom:24px;display:flex;align-items:center;gap:10px}
+    .sec-tag::after{content:'';display:inline-block;width:32px;height:1px;background:var(--border)}
+    .sec-title{font-family:var(--serif);font-size:48px;font-weight:300;line-height:1.08;letter-spacing:-.015em;color:var(--black);margin-bottom:20px}
+    .sec-title em{font-style:italic}
+    .sec-body{font-size:14px;font-weight:300;line-height:1.9;color:var(--mid);max-width:700px}
+
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:42px;margin-top:38px;max-width:920px}
+    .mini-label{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--black);font-weight:500;margin-bottom:10px}
+    .mini-text{font-size:13px;font-weight:300;line-height:1.85;color:var(--mid)}
+
+    .phil-block{margin-top:48px;background:var(--black);border-radius:3px;padding:42px;max-width:920px}
+    .phil-tag{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#5f5f5f;margin-bottom:20px}
+    .phil-quote{font-family:var(--serif);font-size:28px;font-weight:300;font-style:italic;line-height:1.48;color:var(--white);margin-bottom:24px}
+    .phil-body{font-size:14px;font-weight:300;line-height:1.85;color:#8b8b8b;border-top:1px solid #222;padding-top:20px}
+
+    .bridge-section{background:var(--off)}
+    .bridge-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(520px,1.1fr);gap:60px;align-items:start}
+    .bridge-card{background:var(--white);border:1px solid var(--border);border-radius:3px;overflow:hidden}
+    .bridge-header{padding:22px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .bridge-title{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--black)}
+    .bridge-pill{font-size:11px;color:var(--mid);border:1px solid var(--border);padding:4px 10px;border-radius:2px;letter-spacing:.04em;text-align:right}
+    .bridge-cols{display:grid;grid-template-columns:1fr auto 1fr}
+    .bridge-side{padding:30px 28px}
+    .bridge-country{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--black);margin-bottom:14px;letter-spacing:.04em}
+    .bridge-list{list-style:none}
+    .bridge-list li{font-size:12px;font-weight:300;color:var(--mid);line-height:1.65;padding:7px 0;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:8px}
+    .bridge-list li:last-child{border-bottom:0}
+    .bridge-list li::before{content:'—';color:var(--gold);font-size:10px;flex-shrink:0}
+    .bridge-divider{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 20px;border-left:1px solid var(--border);border-right:1px solid var(--border);background:var(--off)}
+    .bridge-icon{font-family:var(--serif);font-size:25px;font-style:italic;color:var(--gold)}
+    .bridge-note{font-size:10px;color:var(--mid);letter-spacing:.06em;text-transform:uppercase;margin-top:6px;text-align:center;line-height:1.6}
+
+    .eco-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:42px}
+    .eco-card{background:var(--white);padding:34px 32px;transition:background .15s;min-height:220px}
+    .eco-card:hover{background:var(--off)}
+    .eco-card.full{grid-column:1/-1;min-height:auto}
+    .eco-n{font-family:var(--serif);font-size:13px;color:var(--gold);margin-bottom:16px}
+    .eco-name{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--black);margin-bottom:8px}
+    .eco-desc{font-size:13px;font-weight:300;color:var(--mid);line-height:1.75;margin-bottom:18px}
+    .eco-tags{display:flex;gap:7px;flex-wrap:wrap}
+    .eco-tag{font-size:11px;color:var(--mid);border:1px solid var(--border);padding:4px 10px;border-radius:1px;letter-spacing:.02em;background:var(--white)}
+    .eco-tag.linked{color:var(--black);transition:border-color .15s;cursor:pointer}
+    .eco-tag.linked:hover{border-color:var(--black)}
+
+
+    .portfolio-proof{margin-top:38px;border:1px solid var(--border);border-radius:3px;overflow:hidden;background:var(--white)}
+    .proof-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;padding:26px 30px;border-bottom:1px solid var(--border);background:linear-gradient(180deg,var(--white),var(--off))}
+    .proof-kicker{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mid)}
+    .proof-title{font-family:var(--serif);font-size:26px;font-weight:300;line-height:1.18;color:var(--black);max-width:560px;text-align:right}
+    .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
+    .proof-card{background:var(--white);padding:26px 24px;min-height:155px;display:flex;flex-direction:column;justify-content:space-between;transition:background .16s}
+    .proof-card:hover{background:var(--off)}
+    .proof-name{font-family:var(--serif);font-size:23px;font-weight:400;color:var(--black);line-height:1.05;margin-bottom:12px}
+    .proof-meta{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+    .proof-text{font-size:12px;line-height:1.65;color:var(--mid)}
+
+    .value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:42px}
+    .value-card{background:var(--white);padding:32px 28px;min-height:290px}
+    .value-card.inv{background:var(--black)}
+    .value-n{font-family:var(--serif);font-size:38px;font-weight:300;line-height:1;margin-bottom:20px;color:var(--border)}
+    .value-card.inv .value-n{color:#242424}
+    .value-title{font-size:13px;font-weight:500;color:var(--black);margin-bottom:9px;letter-spacing:.02em}
+    .value-card.inv .value-title{color:var(--white)}
+    .value-text{font-size:12px;font-weight:300;line-height:1.8;color:var(--mid)}
+    .value-card.inv .value-text{color:#767676}
+
+    .cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:42px;max-width:1180px}
+    .cred-card{background:var(--white);padding:30px 28px}
+    .cred-val{font-family:var(--serif);font-size:34px;font-weight:300;color:var(--black);line-height:1;margin-bottom:10px}
+    .cred-label{font-size:12px;font-weight:300;color:var(--mid);line-height:1.6}
+
+    .lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:42px}
+    .lead-card{border:1px solid var(--border);border-radius:3px;overflow:hidden;background:var(--white)}
+    .lead-top{height:160px;background:var(--off);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border)}
+    .lead-avatar{width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:22px;font-weight:300;letter-spacing:.04em}
+    .lead-avatar.dark{background:var(--black);color:var(--white)}
+    .lead-avatar.light{background:var(--white);border:1px solid var(--border);color:var(--black)}
+    .lead-body{padding:26px}
+    .lead-name{font-family:var(--serif);font-size:25px;font-weight:400;color:var(--black);margin-bottom:3px}
+    .lead-role{font-size:11px;color:var(--mid);letter-spacing:.07em;text-transform:uppercase;margin-bottom:14px}
+    .lead-bio{font-size:13px;font-weight:300;line-height:1.82;color:var(--mid)}
+    .lead-badge{display:inline-block;margin-top:14px;font-size:10px;color:var(--black);border:1px solid rgba(184,155,94,.45);padding:4px 10px;border-radius:1px;letter-spacing:.04em;background:rgba(184,155,94,.08)}
+    .language-note{margin-top:28px;border:1px solid var(--border);border-radius:3px;display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;background:var(--white)}
+    .lang-cell{text-align:center;padding:18px;border-right:1px solid var(--border)}
+    .lang-cell:last-child{border-right:0}
+    .lang-name{font-family:var(--serif);font-size:19px;font-weight:300;color:var(--black);margin-bottom:4px}
+    .lang-sub{font-size:11px;color:var(--mid);letter-spacing:.03em}
+
+    .contact-section{background:var(--off);border-bottom:0}
+    .contact-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:60px;align-items:start;margin-top:42px}
+    .form-panel,.contact-panel{background:var(--white);border:1px solid var(--border);border-radius:3px;padding:32px}
+    .f-field{margin-bottom:15px}
+    .f-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);display:block;margin-bottom:6px}
+    .f-input,.f-select,.f-textarea{width:100%;border:1px solid var(--border);border-radius:1px;padding:11px 13px;font-size:13px;font-family:var(--sans);font-weight:300;color:var(--black);background:var(--white);outline:none}
+    .f-input:focus,.f-select:focus,.f-textarea:focus{border-color:var(--black)}
+    .f-textarea{resize:vertical;min-height:100px}
+    .f-submit{width:100%;background:var(--black);color:var(--white);border:0;padding:14px;font-size:13px;font-weight:500;letter-spacing:.04em;cursor:pointer;border-radius:1px;font-family:var(--sans);margin-top:6px}
+    .ci-title{font-family:var(--serif);font-size:27px;font-weight:300;line-height:1.35;color:var(--black);margin-bottom:28px}
+    .ci-block{margin-bottom:20px}
+    .ci-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);margin-bottom:7px}
+    .ci-val{font-size:13px;font-weight:300;color:var(--black);line-height:1.7}
+    .ci-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+    .ci-tag{font-size:11px;border:1px solid var(--border);padding:4px 10px;border-radius:1px;color:var(--mid);background:var(--white)}
+
+    footer{border-top:1px solid #1f1f1f;padding:42px 0;background:var(--black);color:#9d9d9d}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+    .footer-logo{display:flex;align-items:center;max-width:300px}.footer-logo img{display:block;width:280px;max-width:100%;height:auto}
+    .footer-links{display:flex;gap:22px;align-items:center}
+    .footer-link{font-size:11px;color:#9d9d9d;letter-spacing:.03em;cursor:pointer;text-decoration:none;transition:color .18s}
+    .footer-link:hover{color:var(--gold)}
+    .footer-copy{font-size:11px;color:#8b8b8b}
+
+
+    .nav-menu-btn{display:none;align-items:center;justify-content:center;width:42px;height:38px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);border-radius:2px;cursor:pointer;padding:0;flex-direction:column;gap:5px}
+    .nav-menu-btn span{display:block;width:18px;height:1px;background:rgba(255,255,255,.82);transition:transform .18s,opacity .18s}
+    .nav-menu-btn.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+    .nav-menu-btn.open span:nth-child(2){opacity:0}
+    .nav-menu-btn.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+    .mobile-menu{display:none;background:rgba(10,10,10,.99);border-top:1px solid rgba(184,155,94,.18);border-bottom:1px solid rgba(184,155,94,.18)}
+    .mobile-menu.open{display:block}
+    .mobile-menu-inner{width:min(1180px,calc(100% - 56px));margin:0 auto;padding:12px 0 16px;display:grid;gap:2px}
+    .mobile-link{display:block;color:rgba(255,255,255,.76);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+    .mobile-link:last-child{border-bottom:0}
+    .mobile-link:hover{color:var(--white)}
+    .form-status{min-height:18px;margin-top:14px;font-size:12px;line-height:1.55;color:var(--mid)}
+    .form-status.error{color:#8b6b2d}
+
+    @media (max-width: 980px){
+      .wrap{width:min(100% - 44px,860px)}
+      .nav-links{display:none}
+      .nav-menu-btn{display:flex}
+      .hero-grid,.bridge-layout,.contact-layout{grid-template-columns:1fr;gap:42px}
+      .symbol-card{min-height:420px;display:block;padding:38px}
+      .symbol-mark{position:relative;right:auto;top:auto;transform:none;width:230px;max-width:64%;margin-bottom:34px}
+      .symbol-bottom{position:relative;left:auto;bottom:auto;width:min(100%,360px)}
+      .symbol-title{font-size:31px}
+      .symbol-body{max-width:360px}
+      .hero-title{font-size:58px}
+      .value-grid{grid-template-columns:repeat(2,1fr)}
+      .trust-row{grid-template-columns:repeat(2,1fr);row-gap:24px}
+      .trust-item:nth-child(2){border-right:0;margin-right:0;padding-right:0}
+    }
+
+    @media (max-width: 680px){
+      .wrap{width:calc(100% - 32px)}
+      .nav-inner{height:auto;padding:14px 0;align-items:center;gap:14px;flex-wrap:wrap}
+      .nav-logo{order:1}
+      .nav-menu-btn{order:2;margin-left:auto}
+      .nav-right{order:3;width:100%;justify-content:space-between;gap:10px}
+      .mobile-menu-inner{width:calc(100% - 32px)}
+      .nav-cta{padding:9px 14px}
+      .lang-btn{padding:7px 9px}
+      .hero-grid{padding:62px 0 56px}
+      .hero-title{font-size:44px;line-height:1.05}
+      .hero-sub{font-size:14px;line-height:1.82}
+      .hero-actions{margin-bottom:38px}
+      .trust-row{grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);padding-top:0}
+      .trust-item{background:var(--white);padding:18px;margin:0;border:0}
+      .sec{padding:62px 0}
+      .sec-title{font-size:38px}
+      .two-col,.eco-grid,.value-grid,.cred-grid,.lead-grid,.language-note,.proof-grid{grid-template-columns:1fr}
+      .eco-card.full{grid-column:auto}
+      .bridge-cols{grid-template-columns:1fr}
+      .bridge-divider{padding:18px;border-left:0;border-right:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+      .bridge-header{display:block}
+      .bridge-pill{display:inline-block;text-align:left;margin-top:10px}
+      .phil-block,.form-panel,.contact-panel{padding:28px}
+      .phil-quote{font-size:24px}
+      .lang-cell{border-right:0;border-bottom:1px solid var(--border)}
+      .lang-cell:last-child{border-bottom:0}
+      .symbol-card{min-height:auto;padding:28px 24px 30px}
+      .symbol-mark{width:150px;max-width:52%;margin:0 0 22px 0}
+      .symbol-bottom{position:relative;left:auto;bottom:auto;width:100%;max-width:280px}
+      .symbol-title{font-size:24px;line-height:1.14;margin-bottom:12px}
+      .symbol-body{font-size:14px;line-height:1.6;max-width:280px}
+      .symbol-card::before{width:260px;height:260px;right:-90px;top:80px;opacity:.6}
+      .symbol-card::after{width:180px;height:180px;right:-50px;top:130px;opacity:.35}
+      .proof-intro{display:block;padding:24px}
+      .proof-title{text-align:left;font-size:23px;margin-top:10px}
+      .footer-inner{display:block}
+      .footer-logo img{width:235px}
+      .footer-links{margin:18px 0}
+    }
+  </style>
+</head>
+<body>
+<!-- Taurux Group Website v6.9: Credibility & Legal Pages Enhancement -->
+<div class="site">
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="nav-logo" href="#hero" aria-label="Taurux Group"><img class="nav-logo-img" src="assets/taurux-logo-gold.png" alt="Taurux Group" width="422" height="186" decoding="async"></a>
+      <button class="nav-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a class="nav-link" href="#about" data-i18n="navAbout">About</a>
+        <a class="nav-link" href="#bridge" data-i18n="navBridge">Bridge</a>
+        <a class="nav-link" href="#ecosystem" data-i18n="navEco">Ecosystem</a>
+        <a class="nav-link" href="#leadership" data-i18n="navLead">Leadership</a>
+        <a class="nav-link" href="#contact" data-i18n="navContact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-switch" aria-label="Language switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="zh">中文</button>
+        </div>
+        <a class="nav-cta" href="#contact" data-i18n="navCta">Partner With Us</a>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <a class="mobile-link" href="#about" data-i18n="navAbout">About</a>
+        <a class="mobile-link" href="#bridge" data-i18n="navBridge">Bridge</a>
+        <a class="mobile-link" href="#ecosystem" data-i18n="navEco">Ecosystem</a>
+        <a class="mobile-link" href="#leadership" data-i18n="navLead">Leadership</a>
+        <a class="mobile-link" href="#contact" data-i18n="navContact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow" data-i18n="heroEyebrow">Taurux Group — Quebec, Canada</div>
+        <h1 class="hero-title" data-i18n-html="heroTitle">Building platforms.<br>Bridging resources.<br><em>Creating lasting value.</em></h1>
+        <p class="hero-sub" data-i18n="heroSub">Taurux Group is a private holding group rooted in Quebec, focused on platform building, resource integration, strategic partnerships, and long-term business development across hospitality, private membership, wealth stewardship, media, and education.</p>
+        <div class="hero-actions">
+          <a class="btn-p" href="#ecosystem" data-i18n="heroBtn1">Explore Our Ecosystem</a>
+          <a class="btn-s" href="#contact" data-i18n="heroBtn2">Partner With Us</a>
+        </div>
+        <div class="trust-row strategy-row">
+          <div class="trust-item"><div class="trust-num">01</div><div class="trust-label" data-i18n="trust1">Platform building</div></div>
+          <div class="trust-item"><div class="trust-num">02</div><div class="trust-label" data-i18n="trust2">Resource integration</div></div>
+          <div class="trust-item"><div class="trust-num">03</div><div class="trust-label" data-i18n="trust3">Strategic partnerships</div></div>
+          <div class="trust-item"><div class="trust-num">04</div><div class="trust-label" data-i18n="trust4">Long-term value</div></div>
+        </div>
+      </div>
+      <div class="symbol-card" aria-label="Taurux visual concept">
+        <div class="symbol-line"></div>
+        <div class="symbol-mark"><img src="assets/taurux-mark-gold.png" alt="Taurux Group mark" width="498" height="469" loading="lazy" decoding="async"></div>
+        <div class="symbol-bottom">
+          <div class="symbol-title" data-i18n-html="symbolTitle">Strength.<br>Stability.<br>Stewardship.</div>
+          <div class="symbol-body" data-i18n="symbolBody">Built on disciplined growth, trusted relationships, and long-term value creation.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag" data-i18n="aboutTag">Who We Are</div>
+        <h2 class="sec-title" data-i18n-html="aboutTitle">A value-driven group built<br>to connect people, businesses,<br><em>and opportunity.</em></h2>
+        <p class="sec-body" data-i18n="aboutBody">Taurux Group brings together businesses, people, capital, and ideas under one shared conviction: genuine value — created for partners, clients, and communities — is the foundation of everything lasting.</p>
+      </div>
+      <div class="two-col">
+        <div>
+          <div class="mini-label" data-i18n="modelLabel">Our Model</div>
+          <div class="mini-text" data-i18n="modelText">We are not simply a portfolio of companies. We operate as a platform of interconnected value, where each business benefits from shared resources, relationships, and long-term strategic thinking.</div>
+        </div>
+        <div>
+          <div class="mini-label" data-i18n="ambitionLabel">Our Ambition</div>
+          <div class="mini-text" data-i18n="ambitionText">We are proudly rooted in Quebec. Our model is built to scale from a strong local foundation toward national and, in time, international reach. Every platform we build is designed to last.</div>
+        </div>
+      </div>
+      <div class="phil-block">
+        <div class="phil-tag" data-i18n="philTag">The Taurux Philosophy</div>
+        <div class="phil-quote" data-i18n="philQuote">“We are not here simply to generate profit. We are here to create value — because when real value is created for others, meaningful returns can follow.”</div>
+        <div class="phil-body" data-i18n="philBody">This conviction shapes how we build, invest, and grow. Strong communities build strong cities. Strong cities build a stronger nation. Every business we create is a contribution to something larger than itself.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec bridge-section" id="bridge">
+    <div class="wrap bridge-layout">
+      <div>
+        <div class="sec-tag" data-i18n="bridgeTag">A Distinctive Advantage</div>
+        <h2 class="sec-title" data-i18n-html="bridgeMainTitle">A rare bridge between<br><em>local expertise and international opportunity.</em></h2>
+        <p class="sec-body" data-i18n="bridgeBody">Through deep roots in both Canadian and Chinese business communities, Taurux Group gives partners access to a Canada–China business network that combines local credibility, international resources, strategic relationships, and development capability.</p>
+      </div>
+      <div class="bridge-card">
+        <div class="bridge-header">
+          <div class="bridge-title" data-i18n="bridgeCardTitle">The Taurux Bridge</div>
+          <div class="bridge-pill" data-i18n="bridgePill">A Canada–China advantage rooted in Quebec</div>
+        </div>
+        <div class="bridge-cols">
+          <div class="bridge-side">
+            <div class="bridge-country" data-i18n="canadaTitle">Canada</div>
+            <ul class="bridge-list">
+              <li data-i18n="canada1">Local business networks and community</li>
+              <li data-i18n="canada2">Quebec and national market access</li>
+              <li data-i18n="canada3">Regulatory and operational expertise</li>
+              <li data-i18n="canada4">Established hospitality platforms</li>
+              <li data-i18n="canada5">Institutional and professional partnerships</li>
+            </ul>
+          </div>
+          <div class="bridge-divider"><div class="bridge-icon">↔</div><div class="bridge-note">Taurux<br>Group</div></div>
+          <div class="bridge-side">
+            <div class="bridge-country" data-i18n="chinaTitle">China</div>
+            <ul class="bridge-list">
+              <li data-i18n="china1">Business networks and strategic relationships</li>
+              <li data-i18n="china2">Supply chain and sourcing connections</li>
+              <li data-i18n="china3">Chinese entrepreneur community</li>
+              <li data-i18n="china4">Cross-market business development</li>
+              <li data-i18n="china5">Brand and market entry support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="ecosystem">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag" data-i18n="ecoTag">Our Ecosystem</div>
+        <h2 class="sec-title" data-i18n-html="ecoTitle">Five sectors.<br><em>One shared vision.</em></h2>
+        <p class="sec-body" data-i18n="ecoBody">Each business inside Taurux Group is distinct in its market, yet connected by the same platform of resources, relationships, and long-term values.</p>
+      </div>
+      <div class="eco-grid">
+        <div class="eco-card"><div class="eco-n">01</div><div class="eco-name" data-i18n="eco1Name">Hospitality & Experiences</div><div class="eco-desc" data-i18n="eco1Desc">Premium dining, entertainment, and celebration experiences that bring people together, from intimate evenings to large-scale events.</div><div class="eco-tags"><a class="eco-tag linked" href="https://lanuitshanghai.ca/en" target="_blank" rel="noopener noreferrer">La Nuit Shanghai ↗</a><a class="eco-tag linked" href="https://mitsukisushi.com" target="_blank" rel="noopener noreferrer">Mitsuki ↗</a></div></div>
+        <div class="eco-card"><div class="eco-n">02</div><div class="eco-name" data-i18n="eco2Name">Private Business Club</div><div class="eco-desc" data-i18n="eco2Desc">A curated environment for business leaders and entrepreneurs, built on trust, discretion, and the power of the right relationships.</div><div class="eco-tags"><span class="eco-tag">Black Pearl</span></div></div>
+        <div class="eco-card"><div class="eco-n">03</div><div class="eco-name" data-i18n="eco3Name">Wealth Stewardship</div><div class="eco-desc" data-i18n="eco3Desc">Financial planning, protection, and long-term stewardship for individuals, families, and business owners who build with a generational perspective.</div><div class="eco-tags"><span class="eco-tag">GTJ Wealth Stewardship</span></div></div>
+        <div class="eco-card"><div class="eco-n">04</div><div class="eco-name" data-i18n="eco4Name">Media & Communications</div><div class="eco-desc" data-i18n="eco4Desc">Strategic storytelling and communications that connect brands, businesses, and communities across languages and markets.</div><div class="eco-tags"><span class="eco-tag">Synera</span></div></div>
+        <div class="eco-card full"><div class="eco-n">05</div><div class="eco-name" data-i18n="eco5Name">Education & Development</div><div class="eco-desc" data-i18n="eco5Desc">Through education-related partnerships and development initiatives, Taurux Group supports learning, professional growth, and community advancement.</div><div class="eco-tags"><span class="eco-tag" data-i18n="eco5Tag1">College Partnerships</span><span class="eco-tag" data-i18n="eco5Tag2">Professional Development</span><span class="eco-tag" data-i18n="eco5Tag3">Community Learning</span></div></div>
+      </div>
+      <div class="portfolio-proof">
+        <div class="proof-intro">
+          <div class="proof-kicker" data-i18n="proofKicker">Portfolio Evidence</div>
+          <div class="proof-title" data-i18n="proofTitle">Operating platforms that make the ecosystem tangible.</div>
+        </div>
+        <div class="proof-grid">
+          <a class="proof-card" href="https://lanuitshanghai.ca/en" target="_blank" rel="noopener noreferrer"><div><div class="proof-name">La Nuit Shanghai</div><div class="proof-meta" data-i18n="proof1Meta">Celebration · Cabaret · Events</div></div><div class="proof-text" data-i18n="proof1Text">A premium hospitality and celebration platform in Quartier DIX30.</div></a>
+          <a class="proof-card" href="https://mitsukisushi.com" target="_blank" rel="noopener noreferrer"><div><div class="proof-name">Mitsuki</div><div class="proof-meta" data-i18n="proof2Meta">Hospitality · Market Presence</div></div><div class="proof-text" data-i18n="proof2Text">A long-standing restaurant brand with over a decade of local market presence.</div></a>
+          <div class="proof-card"><div><div class="proof-name">GTJ Wealth Stewardship</div><div class="proof-meta" data-i18n="proof3Meta">Planning · Protection · Stewardship</div></div><div class="proof-text" data-i18n="proof3Text">A long-term wealth stewardship platform serving individuals, families, and business owners.</div></div>
+          <div class="proof-card"><div><div class="proof-name">Black Pearl</div><div class="proof-meta" data-i18n="proof4Meta">Private Business Club</div></div><div class="proof-text" data-i18n="proof4Text">A developing private business club concept built around trust, discretion, and high-value relationships.</div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="sec" id="value">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag" data-i18n="valueTag">How We Create Value</div>
+        <h2 class="sec-title" data-i18n-html="valueTitle">Four principles.<br><em>One direction.</em></h2>
+      </div>
+      <div class="value-grid">
+        <div class="value-card inv"><div class="value-n">01</div><div class="value-title" data-i18n="val1Title">Value Over Profit</div><div class="value-text" data-i18n="val1Text">We begin with contribution, not short-term gain. Return is strongest when it is built on real value, trust, and long-term alignment.</div></div>
+        <div class="value-card"><div class="value-n">02</div><div class="value-title" data-i18n="val2Title">Resource Integration</div><div class="value-text" data-i18n="val2Text">We connect capital, talent, networks, and knowledge across our portfolio, including access to Canadian and Chinese business ecosystems.</div></div>
+        <div class="value-card"><div class="value-n">03</div><div class="value-title" data-i18n="val3Title">Platform Building</div><div class="value-text" data-i18n="val3Text">We create spaces and systems where people, businesses, and ideas can take root, grow, and multiply.</div></div>
+        <div class="value-card"><div class="value-n">04</div><div class="value-title" data-i18n="val4Title">Community First</div><div class="value-text" data-i18n="val4Text">We believe stronger communities create stronger cities, and stronger cities build a stronger future.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="track">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag" data-i18n="trackTag">Track Record</div>
+        <h2 class="sec-title" data-i18n-html="trackTitle">Built on operating experience,<br><em>not promises.</em></h2>
+        <p class="sec-body" data-i18n="trackBody">Our track record is built through real operations, trusted relationships, and the discipline to turn ideas into durable platforms.</p>
+      </div>
+      <div class="cred-grid">
+        <div class="cred-card"><div class="cred-val" data-i18n="credVal1">25+</div><div class="cred-label" data-i18n="cred1">Years of hospitality experience</div></div>
+        <div class="cred-card"><div class="cred-val" data-i18n="credVal2">12+</div><div class="cred-label" data-i18n="cred2">Years of Mitsuki’s market presence</div></div>
+        <div class="cred-card"><div class="cred-val" data-i18n="credVal3">7+</div><div class="cred-label" data-i18n="cred3">Years of GTJ Wealth Stewardship</div></div>
+        <div class="cred-card"><div class="cred-val" data-i18n="credVal4">4+</div><div class="cred-label" data-i18n="cred4">Years building La Nuit Shanghai</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="leadership">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag" data-i18n="leadTag">Leadership</div>
+        <h2 class="sec-title" data-i18n-html="leadTitle">Vision and execution.<br><em>Aligned under one team.</em></h2>
+        <p class="sec-body" data-i18n="leadBody">Taurux Group is led with complementary strengths: strategic direction, disciplined execution, and long-term relationship building.</p>
+      </div>
+      <div class="lead-grid">
+        <div class="lead-card"><div class="lead-top"><div class="lead-avatar dark">JL</div></div><div class="lead-body"><div class="lead-name">Jacky Lin</div><div class="lead-role" data-i18n="jackyRole">President & Founder</div><div class="lead-bio" data-i18n="jackyBio">Jacky sets the strategic direction of Taurux Group. He evaluates new ventures, identifies where opportunity meets timing, and builds partnerships that strengthen the group’s ecosystem and long-term growth.</div><span class="lead-badge" data-i18n="jackyBadge">AGA Brossard — Board Director</span></div></div>
+        <div class="lead-card"><div class="lead-top"><div class="lead-avatar light">RL</div></div><div class="lead-body"><div class="lead-name">Rebecca Li</div><div class="lead-role" data-i18n="rebeccaRole">Vice President &amp; Co-Founder</div><div class="lead-bio" data-i18n="rebeccaBio">Rebecca translates strategy into results. She oversees execution, governance, and project implementation across the Taurux portfolio, ensuring that priorities move from planning to accountable delivery.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec contact-section" id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag" data-i18n="contactTag">Contact</div>
+        <h2 class="sec-title" data-i18n-html="contactTitle">Let’s create<br><em>lasting value together.</em></h2>
+      </div>
+      <div class="contact-layout">
+        <!-- Contact recipient confirmed: Rebeccali@groupsh.ca.
+             Developer note: connect this form through a real Formspree/CRM/server endpoint that sends submissions to this address.
+             Do not rely on raw mailto: for production. -->
+        <form class="form-panel" id="contactForm" method="post" action="" data-recipient-email="Rebeccali@groupsh.ca">
+          <div class="f-field"><label class="f-label" for="name" data-i18n="formName">Full Name</label><input class="f-input" id="name" name="name" type="text" required data-i18n-placeholder="phName" placeholder="Your name"></div>
+          <div class="f-field"><label class="f-label" for="company" data-i18n="formCompany">Company</label><input class="f-input" id="company" name="company" type="text" data-i18n-placeholder="phCompany" placeholder="Organization"></div>
+          <div class="f-field"><label class="f-label" for="email" data-i18n="formEmail">Email</label><input class="f-input" id="email" name="email" type="email" required placeholder="your@email.com"></div>
+          <div class="f-field"><label class="f-label" for="phone" data-i18n="formPhone">Phone</label><input class="f-input" id="phone" name="phone" type="tel" placeholder="+1 (000) 000-0000"></div>
+          <div class="f-field"><label class="f-label" for="type" data-i18n="formType">Inquiry Type</label><select class="f-select" id="type" name="type"><option data-i18n="opt1">Strategic Partnership</option><option data-i18n="opt2">Canada–China Business Development</option><option data-i18n="opt3">Hospitality</option><option data-i18n="opt4">Private Business Club — Black Pearl</option><option data-i18n="opt5">Wealth Stewardship</option><option data-i18n="opt6">Media & Communications</option><option data-i18n="opt7">Education Partnership</option><option data-i18n="opt8">General Inquiry</option></select></div>
+          <div class="f-field"><label class="f-label" for="message" data-i18n="formMessage">Message</label><textarea class="f-textarea" id="message" name="message" data-i18n-placeholder="phMessage" placeholder="Tell us about your project or inquiry..."></textarea></div>
+          <button class="f-submit" type="submit" data-i18n="formSubmit">Send Message</button>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        </form>
+        <div class="contact-panel">
+          <div class="ci-title" data-i18n="ciTitle">For strategic partnerships and business development inquiries</div>
+          <div class="ci-block"><div class="ci-label" data-i18n="ciHq">Headquarters</div><div class="ci-val">Quartier DIX30<br>Brossard, Quebec, Canada</div></div>
+          <div class="ci-block"><div class="ci-label" data-i18n="ciReach">Operating Reach</div><div class="ci-val" data-i18n-html="ciReachVal">Quebec · Canada · China<br><span style="font-size:12px;color:var(--mid)">Growing nationally and internationally</span></div></div>
+          <div class="ci-block"><div class="ci-label" data-i18n="ciWork">We Work With</div><div class="ci-tags"><span class="ci-tag" data-i18n="tagPartner">Strategic Partners</span><span class="ci-tag" data-i18n="tagLocal">Local Businesses</span><span class="ci-tag" data-i18n="tagEntre">Entrepreneurs</span><span class="ci-tag" data-i18n="tagIntl">International Partners</span><span class="ci-tag" data-i18n="tagInst">Institutional Collaborators</span></div></div>
+          <div class="ci-block"><div class="ci-label" data-i18n="ciFocus">Operating Focus</div><div class="ci-val" data-i18n="ciFocusVal">Platform building · Strategic partnerships · Long-term value creation</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-logo"><img class="footer-logo-img" src="assets/taurux-logo-gold.png" alt="Taurux Group" width="422" height="186" loading="lazy" decoding="async"></div>
+      <div class="footer-links"><a class="footer-link" href="/privacy-policy.html" data-i18n="privacy">Privacy Policy</a><a class="footer-link" href="/legal-notice.html" data-i18n="legal">Legal Notice</a></div>
+      <div class="footer-copy">© 2026 Taurux Group. <span data-i18n="rights">All rights reserved.</span></div>
+    </div>
+  </footer>
+</div>
+
+<script>
+let currentLang = 'en';
+const translations = {
+  en: {
+    navAbout:'About',navBridge:'Bridge',navEco:'Ecosystem',navLead:'Leadership',navContact:'Contact',navCta:'Partner With Us',
+    heroEyebrow:'Taurux Group — Quebec, Canada',heroTitle:'Building platforms.<br>Bridging resources.<br><em>Creating lasting value.</em>',heroSub:'Taurux Group is a private holding group rooted in Quebec, focused on platform building, resource integration, strategic partnerships, and long-term business development across hospitality, private membership, wealth stewardship, media, and education.',heroBtn1:'Explore Our Ecosystem',heroBtn2:'Partner With Us',trust1:'Platform building',trust2:'Resource integration',trust3:'Strategic partnerships',trust4:'Long-term value',
+    symbolTitle:'Strength.<br>Stability.<br>Stewardship.',symbolBody:'Built on disciplined growth, trusted relationships, and long-term value creation.',
+    aboutTag:'Who We Are',aboutTitle:'A value-driven group built<br>to connect people, businesses,<br><em>and opportunity.</em>',aboutBody:'Taurux Group brings together businesses, people, capital, and ideas under one shared conviction: genuine value — created for partners, clients, and communities — is the foundation of everything lasting.',modelLabel:'Our Model',modelText:'We are not simply a portfolio of companies. We operate as a platform of interconnected value, where each business benefits from shared resources, relationships, and long-term strategic thinking.',ambitionLabel:'Our Ambition',ambitionText:'We are proudly rooted in Quebec. Our model is built to scale from a strong local foundation toward national and, in time, international reach. Every platform we build is designed to last.',philTag:'The Taurux Philosophy',philQuote:'“We are not here simply to generate profit. We are here to create value — because when real value is created for others, meaningful returns can follow.”',philBody:'This conviction shapes how we build, invest, and grow. Strong communities build strong cities. Strong cities build a stronger nation. Every business we create is a contribution to something larger than itself.',
+    bridgeTag:'A Distinctive Advantage',bridgeMainTitle:'A rare bridge between<br><em>local expertise and international opportunity.</em>',bridgeBody:'Through deep roots in both Canadian and Chinese business communities, Taurux Group gives partners access to a Canada–China business network that combines local credibility, international resources, strategic relationships, and development capability.',bridgeCardTitle:'The Taurux Bridge',bridgePill:'A Canada–China advantage rooted in Quebec',canadaTitle:'Canada',canada1:'Local business networks and community',canada2:'Quebec and national market access',canada3:'Regulatory and operational expertise',canada4:'Established hospitality platforms',canada5:'Institutional and professional partnerships',chinaTitle:'China',china1:'Business networks and strategic relationships',china2:'Supply chain and sourcing connections',china3:'Chinese entrepreneur community',china4:'Cross-market business development',china5:'Brand and market entry support',
+    ecoTag:'Our Ecosystem',ecoTitle:'Five sectors.<br><em>One shared vision.</em>',ecoBody:'Each business inside Taurux Group is distinct in its market, yet connected by the same platform of resources, relationships, and long-term values.',eco1Name:'Hospitality & Experiences',eco1Desc:'Premium dining, entertainment, and celebration experiences that bring people together, from intimate evenings to large-scale events.',eco2Name:'Private Business Club',eco2Desc:'A curated environment for business leaders and entrepreneurs, built on trust, discretion, and the power of the right relationships.',eco3Name:'Wealth Stewardship',eco3Desc:'Financial planning, protection, and long-term stewardship for individuals, families, and business owners who build with a generational perspective.',eco4Name:'Media & Communications',eco4Desc:'Strategic storytelling and communications that connect brands, businesses, and communities across languages and markets.',eco5Name:'Education & Development',eco5Desc:'Through education-related partnerships and development initiatives, Taurux Group supports learning, professional growth, and community advancement.',eco5Tag1:'College Partnerships',eco5Tag2:'Professional Development',eco5Tag3:'Community Learning',proofKicker:'Portfolio Evidence',proofTitle:'Operating platforms that make the ecosystem tangible.',proof1Meta:'Celebration · Cabaret · Events',proof1Text:'A premium hospitality and celebration platform in Quartier DIX30.',proof2Meta:'Hospitality · Market Presence',proof2Text:'A long-standing restaurant brand with over a decade of local market presence.',proof3Meta:'Planning · Protection · Stewardship',proof3Text:'A long-term wealth stewardship platform serving individuals, families, and business owners.',proof4Meta:'Private Business Club',proof4Text:'A developing private business club concept built around trust, discretion, and high-value relationships.',
+    valueTag:'How We Create Value',valueTitle:'Four principles.<br><em>One direction.</em>',val1Title:'Value Over Profit',val1Text:'We begin with contribution, not short-term gain. Return is strongest when it is built on real value, trust, and long-term alignment.',val2Title:'Resource Integration',val2Text:'We connect capital, talent, networks, and knowledge across our portfolio, including access to Canadian and Chinese business ecosystems.',val3Title:'Platform Building',val3Text:'We create spaces and systems where people, businesses, and ideas can take root, grow, and multiply.',val4Title:'Community First',val4Text:'We believe stronger communities create stronger cities, and stronger cities build a stronger future.',
+    trackTag:'Track Record',trackTitle:'Built on real operating experience,<br><em>not promises.</em>',trackBody:'These milestones reflect the operating experience, brand-building work, and long-term business development behind the Taurux ecosystem.',credVal1:'25+',credVal2:'12+',credVal3:'7+',credVal4:'4+',cred1:'Years of hospitality experience',cred2:'Years of Mitsuki’s market presence',cred3:'Years of GTJ Wealth Stewardship',cred4:'Years building La Nuit Shanghai',
+    leadTag:'Leadership',leadTitle:'Vision and execution.<br><em>Aligned under one team.</em>',leadBody:'Taurux Group is led with complementary strengths: strategic direction, disciplined execution, and long-term relationship building.',jackyRole:'President & Founder',jackyBio:'Jacky sets the strategic direction of Taurux Group. He evaluates new ventures, identifies where opportunity meets timing, and builds partnerships that strengthen the group’s ecosystem and long-term growth.',jackyBadge:'AGA Brossard — Board Director',rebeccaRole:'Vice President & Co-Founder',rebeccaBio:'Rebecca translates strategy into results. She oversees execution, governance, and project implementation across the Taurux portfolio, ensuring that priorities move from planning to accountable delivery.',
+    contactTag:'Contact',contactTitle:'Let’s create<br><em>lasting value together.</em>',formName:'Full Name',formCompany:'Company',formEmail:'Email',formPhone:'Phone',formType:'Inquiry Type',formMessage:'Message',formSubmit:'Send Message',phName:'Your name',phCompany:'Organization',phMessage:'Tell us about your project or inquiry...',opt1:'Strategic Partnership',opt2:'Canada–China Business Development',opt3:'Hospitality',opt4:'Private Business Club — Black Pearl',opt5:'Wealth Stewardship',opt6:'Media & Communications',opt7:'Education Partnership',opt8:'General Inquiry',ciTitle:'For strategic partnerships and business development inquiries',ciHq:'Headquarters',ciReach:'Operating Reach',ciReachVal:'Quebec · Canada · China<br><span style="font-size:12px;color:var(--mid)">Focused on Canada–China business development and strategic partnerships</span>',ciWork:'We Work With',tagPartner:'Strategic Partners',tagLocal:'Local Businesses',tagEntre:'Entrepreneurs',tagIntl:'Canada–China Partners',tagInst:'Institutional Collaborators',ciFocus:'Operating Focus',ciFocusVal:'Platform building · Strategic partnerships · Long-term value creation',privacy:'Privacy Policy',legal:'Legal Notice',rights:'All rights reserved.',formNotConnected:'This contact form still needs to be connected to a live email or CRM endpoint before launch.'
+  },
+  fr: {
+    navAbout:'À propos',navBridge:'Pont',navEco:'Écosystème',navLead:'Direction',navContact:'Contact',navCta:'Devenir partenaire',
+    heroEyebrow:'Taurux Group — Québec, Canada',heroTitle:'Créer des plateformes.<br>Relier les ressources.<br><em>Bâtir une valeur durable.</em>',heroSub:'Taurux Group est une société de portefeuille privée enracinée au Québec, axée sur la création de plateformes, l’intégration des ressources, les partenariats stratégiques et le développement d’affaires à long terme dans la restauration, l’accueil, les clubs d’affaires privés, la planification financière, les médias et l’éducation.',heroBtn1:'Découvrir notre écosystème',heroBtn2:'Devenir partenaire',trust1:'Création de plateformes',trust2:'Intégration des ressources',trust3:'Partenariats stratégiques',trust4:'Valeur durable',
+    symbolTitle:'Force.<br>Stabilité.<br>Responsabilité.',symbolBody:'Créer une valeur durable grâce à une croissance maîtrisée, à des relations de confiance et à une vision à long terme.',
+    aboutTag:'Qui nous sommes',aboutTitle:'Un groupe guidé par la valeur,<br>conçu pour relier les personnes,<br>les entreprises <em>et les occasions.</em>',aboutBody:'Taurux Group rassemble des entreprises, des personnes, du capital et des idées autour d’une conviction commune : la vraie valeur — créée pour les partenaires, les clients et les communautés — est la base de tout ce qui dure.',modelLabel:'Notre modèle',modelText:'Nous ne sommes pas simplement un portefeuille d’entreprises. Nous agissons comme une plateforme de valeur interconnectée, où chaque entreprise bénéficie de ressources partagées, de relations solides et d’une vision stratégique à long terme.',ambitionLabel:'Notre ambition',ambitionText:'Nous sommes fièrement enracinés au Québec. Notre modèle est conçu pour croître à partir d’une base locale solide vers une portée nationale et, avec le temps, internationale. Chaque plateforme que nous bâtissons est pensée pour durer.',philTag:'La philosophie Taurux',philQuote:'« Nous ne sommes pas là uniquement pour générer du profit. Nous sommes là pour créer de la valeur — parce que lorsque de la vraie valeur est créée pour les autres, des retombées durables peuvent suivre. »',philBody:'Cette conviction guide notre façon de bâtir, d’investir et de croître. Des communautés fortes bâtissent des villes fortes. Des villes fortes contribuent à un pays plus fort. Chaque entreprise que nous créons contribue à quelque chose de plus grand qu’elle-même.',
+    bridgeTag:'Un avantage distinctif',bridgeMainTitle:'Un pont rare entre<br><em>l’expertise locale et les occasions internationales.</em>',bridgeBody:'Grâce à des racines profondes dans les communautés d’affaires canadiennes et chinoises, Taurux Group donne à ses partenaires accès à un réseau d’affaires Canada–Chine qui combine crédibilité locale, ressources internationales, relations stratégiques et capacité de développement.',bridgeCardTitle:'Le pont Taurux',bridgePill:'Un avantage Canada–Chine enraciné au Québec',canadaTitle:'Canada',canada1:'Réseaux d’affaires locaux et communautaires',canada2:'Accès au marché québécois et canadien',canada3:'Expertise réglementaire et opérationnelle',canada4:'Plateformes établies en restauration et accueil',canada5:'Partenariats institutionnels et professionnels',chinaTitle:'Chine',china1:'Réseaux d’affaires et relations stratégiques',china2:'Liens d’approvisionnement et de sourcing',china3:'Communauté d’entrepreneurs chinois',china4:'Développement d’affaires Canada–Chine',china5:'Soutien à l’entrée de marché et au positionnement de marque',
+    ecoTag:'Notre écosystème',ecoTitle:'Cinq secteurs.<br><em>Une vision commune.</em>',ecoBody:'Chaque entreprise de Taurux Group est distincte dans son marché, tout en étant reliée par la même plateforme de ressources, de relations et de valeurs à long terme.',eco1Name:'Restauration, accueil et expériences',eco1Desc:'Des expériences haut de gamme de restauration, de divertissement et de célébration qui rassemblent les gens, des soirées intimes aux grands événements.',eco2Name:'Club d’affaires privé',eco2Desc:'Un environnement soigneusement conçu pour les dirigeants et entrepreneurs, fondé sur la confiance, la discrétion et la force des bonnes relations.',eco3Name:'Planification financière et gestion patrimoniale',eco3Desc:'Planification financière, protection et accompagnement à long terme pour les personnes, les familles et les propriétaires d’entreprise qui bâtissent avec une vision générationnelle.',eco4Name:'Médias et communications',eco4Desc:'Narration stratégique et communications qui relient les marques, les entreprises et les communautés à travers les langues et les marchés.',eco5Name:'Éducation et développement',eco5Desc:'Grâce à des partenariats et initiatives liés à l’éducation, Taurux Group soutient l’apprentissage, le développement professionnel et l’avancement des communautés.',eco5Tag1:'Partenariats collégiaux',eco5Tag2:'Développement professionnel',eco5Tag3:'Apprentissage communautaire',proofKicker:'Preuves concrètes',proofTitle:'Des plateformes opérationnelles qui rendent l’écosystème tangible.',proof1Meta:'Célébrations · Cabaret · Événements',proof1Text:'Une plateforme haut de gamme de restauration, d’accueil et de célébration au Quartier DIX30.',proof2Meta:'Restauration · Présence sur le marché',proof2Text:'Une marque de restaurant établie avec plus d’une décennie de présence locale.',proof3Meta:'Planification · Protection · Gestion patrimoniale',proof3Text:'Une plateforme de gestion patrimoniale à long terme au service des particuliers, des familles et des propriétaires d’entreprise.',proof4Meta:'Club d’affaires privé',proof4Text:'Un concept de club d’affaires privé en développement, fondé sur la confiance, la discrétion et les relations à haute valeur.',
+    valueTag:'Notre création de valeur',valueTitle:'Quatre principes.<br><em>Une même direction.</em>',val1Title:'La valeur avant le profit',val1Text:'Nous commençons par la contribution, non par le gain à court terme. Le rendement est plus solide lorsqu’il repose sur une vraie valeur, la confiance et l’alignement à long terme.',val2Title:'Intégration des ressources',val2Text:'Nous relions le capital, les talents, les réseaux et les connaissances à travers notre portefeuille, y compris l’accès aux écosystèmes d’affaires canadien et chinois.',val3Title:'Création de plateformes',val3Text:'Nous créons des espaces et des systèmes où les personnes, les entreprises et les idées peuvent prendre racine, croître et se multiplier.',val4Title:'La communauté d’abord',val4Text:'Nous croyons que des communautés plus fortes créent des villes plus fortes, et que des villes plus fortes bâtissent un avenir plus solide.',
+    trackTag:'Parcours',trackTitle:'Fondé sur une expérience opérationnelle réelle,<br><em>pas sur les promesses.</em>',trackBody:'Ces jalons reflètent l’expérience opérationnelle, le développement de marques et le travail de développement d’affaires à long terme derrière l’écosystème Taurux.',credVal1:'25+',credVal2:'12+',credVal3:'7+',credVal4:'4+',cred1:'ans d’expérience en restauration et accueil',cred2:'ans de présence de Mitsuki sur le marché',cred3:'ans avec GTJ Wealth Stewardship',cred4:'ans de développement de La Nuit Shanghai',
+    leadTag:'Direction',leadTitle:'Vision et exécution.<br><em>Alignées au sein d’une même équipe.</em>',leadBody:'Taurux Group est dirigé par des forces complémentaires : orientation stratégique, exécution rigoureuse et développement de relations à long terme.',jackyRole:'Président et fondateur',jackyBio:'Jacky définit l’orientation stratégique de Taurux Group. Il évalue de nouveaux projets, reconnaît les occasions au bon moment et bâtit des partenariats qui renforcent l’écosystème du groupe et sa croissance à long terme.',jackyBadge:'Membre du conseil d’administration — AGA Brossard',rebeccaRole:'Vice-présidente et cofondatrice',rebeccaBio:'Rebecca transforme la stratégie en résultats. Elle supervise l’exécution, la gouvernance et la mise en œuvre des projets du portefeuille Taurux, afin que les priorités passent de la planification à une réalisation responsable.',
+    contactTag:'Contact',contactTitle:'Créons ensemble<br><em>une valeur durable.</em>',formName:'Nom complet',formCompany:'Entreprise',formEmail:'Courriel',formPhone:'Téléphone',formType:'Type de demande',formMessage:'Message',formSubmit:'Envoyer le message',phName:'Votre nom',phCompany:'Organisation',phMessage:'Présentez-nous votre projet ou votre demande...',opt1:'Partenariat stratégique',opt2:'Développement d’affaires Canada–Chine',opt3:'Restauration et accueil',opt4:'Club d’affaires privé — Black Pearl',opt5:'Planification financière et gestion patrimoniale',opt6:'Médias et communications',opt7:'Partenariat en éducation',opt8:'Demande générale',ciTitle:'Pour les partenariats stratégiques et les demandes de développement d’affaires',ciHq:'Siège social',ciReach:'Portée opérationnelle',ciReachVal:'Québec · Canada · Chine<br><span style="font-size:12px;color:var(--mid)">Axé sur le développement d’affaires Canada–Chine et les partenariats stratégiques</span>',ciWork:'Nous travaillons avec',tagPartner:'Partenaires stratégiques',tagLocal:'Entreprises locales',tagEntre:'Entrepreneurs',tagIntl:'Partenaires Canada–Chine',tagInst:'Collaborateurs institutionnels',ciFocus:'Orientation opérationnelle',ciFocusVal:'Création de plateformes · Partenariats stratégiques · Création de valeur durable',privacy:'Politique de confidentialité',legal:'Avis juridique',rights:'Tous droits réservés.',formNotConnected:'Ce formulaire doit encore être connecté à une adresse courriel ou à un CRM avant la mise en ligne.'
+  },
+  zh: {
+    navAbout:'关于我们',navBridge:'桥梁优势',navEco:'业务生态',navLead:'领导团队',navContact:'联系我们',navCta:'合作洽询',
+    heroEyebrow:'Taurux Group — 加拿大魁北克',heroTitle:'搭建平台。<br>连接资源。<br><em>创造长期价值。</em>',heroSub:'Taurux Group 是一家扎根魁北克的私人控股集团，专注于平台搭建、资源整合、战略合作与长期商业发展，业务生态覆盖高端餐饮与体验服务、商务会所、财富规划与长期守护、传媒传播与教育发展。',heroBtn1:'了解业务生态',heroBtn2:'洽谈合作',trust1:'平台搭建',trust2:'资源整合',trust3:'战略合作',trust4:'长期价值',
+    symbolTitle:'力量。<br>稳健。<br>守护。',symbolBody:'以稳健成长、信任关系与长期承诺，创造可持续价值。',
+    aboutTag:'我们是谁',aboutTitle:'以价值为核心，<br>连接人、企业<br><em>与机会。</em>',aboutBody:'Taurux Group 将企业、人脉、资本与想法汇聚在同一个信念之下：为合作伙伴、客户与社区创造真实价值，是一切长期发展的根基。',modelLabel:'我们的模式',modelText:'我们不是简单持有几家公司，而是搭建一个彼此连接的价值平台。生态中的每一项业务，都能从共享资源、关系网络与长期战略思维中受益。',ambitionLabel:'我们的愿景',ambitionText:'我们扎根魁北克，从稳固的本地基础出发，逐步走向加拿大更广阔的市场，并在合适时机拓展国际机会。我们所搭建的每一个平台，都以长期为目标。',philTag:'Taurux 的价值观',philQuote:'“我们不只是为了创造利润而存在。我们存在的意义，是创造价值——因为当真正的价值被带给他人，有意义的回报才会自然发生。”',philBody:'这个信念影响我们如何建设、投资与成长。社区强，城市才会强；城市强，国家才会更强。我们所创造的每一项业务，都是对更大共同体的一份贡献。',
+    bridgeTag:'独特优势',bridgeMainTitle:'连接本地专业能力<br><em>与国际机会的稀有桥梁。</em>',bridgeBody:'凭借在加拿大与中国商业社区中的深厚根基，Taurux Group 为合作伙伴提供一个连接加拿大与中国的商业网络，结合本地信任、国际资源、战略关系与商业发展能力。',bridgeCardTitle:'Taurux Bridge',bridgePill:'扎根魁北克的中加桥梁优势',canadaTitle:'加拿大',canada1:'本地商业网络与社区关系',canada2:'魁北克与加拿大市场入口',canada3:'法规与运营经验',canada4:'已建立的餐饮与接待平台',canada5:'机构与专业合作关系',chinaTitle:'中国',china1:'商业网络与战略关系',china2:'供应链与采购资源连接',china3:'华人企业家社区',china4:'中加商业发展机会',china5:'品牌进入市场与定位支持',
+    ecoTag:'业务生态',ecoTitle:'五大板块。<br><em>一个共同愿景。</em>',ecoBody:'Taurux Group 旗下每一项业务都拥有独立的市场定位，同时通过共同的资源平台、关系网络与长期价值观彼此连接。',eco1Name:'高端餐饮与体验服务',eco1Desc:'通过高端餐饮、娱乐与庆祝体验，将人们连接在一起——从私密晚宴到大型庆祝活动。',eco2Name:'商务会所',eco2Desc:'为企业家与商业领袖打造一个以信任、私密与高质量关系为基础的精选商务社交空间。',eco3Name:'财富规划与长期守护',eco3Desc:'为个人、家庭与企业主提供财务规划、保障配置与长期财富守护，服务有代际视角的客户。',eco4Name:'传媒传播',eco4Desc:'通过战略叙事与传播能力，连接品牌、企业与社区，跨越不同语言与市场。',eco5Name:'教育与发展',eco5Desc:'通过教育相关合作与发展项目，Taurux Group 支持学习、职业成长与社区进步。',eco5Tag1:'学院合作',eco5Tag2:'职业发展',eco5Tag3:'社区学习',proofKicker:'真实资产',proofTitle:'用正在运营的平台，让业务生态变得具体可见。',proof1Meta:'庆祝 · Cabaret · 活动',proof1Text:'位于 Quartier DIX30 的高端餐饮、表演与庆祝体验平台。',proof2Meta:'餐饮 · 市场积累',proof2Text:'拥有超过十年本地市场经营积累的餐饮品牌。',proof3Meta:'规划 · 保障 · 财富守护',proof3Text:'服务个人、家庭与企业主的长期财富守护平台。',proof4Meta:'私人商务会所',proof4Text:'正在发展的私人商务会所概念，建立在信任、私密与高价值关系之上。',
+    valueTag:'我们如何创造价值',valueTitle:'四项原则。<br><em>一个方向。</em>',val1Title:'价值先于利润',val1Text:'我们从贡献出发，而不是从短期收益出发。真正稳固的回报，建立在真实价值、信任与长期协同之上。',val2Title:'资源整合',val2Text:'我们在生态内部连接资本、人才、网络与知识，同时连接加拿大与中国的商业生态。',val3Title:'平台搭建',val3Text:'我们创造空间与系统，让人、企业与想法能够扎根、成长并产生更大的影响。',val4Title:'社区优先',val4Text:'我们相信，更强的社区成就更强的城市；更强的城市，建设更稳固的未来。',
+    trackTag:'真实积累',trackTitle:'建立在真实运营经验之上，<br><em>而不是承诺之上。</em>',trackBody:'这些节点体现了 Taurux 生态背后的运营经验、品牌建设与长期商业发展积累。',credVal1:'25+',credVal2:'12+',credVal3:'7+',credVal4:'4+',cred1:'高端餐饮与体验服务经验',cred2:'Mitsuki 市场经营积累',cred3:'GTJ Wealth Stewardship 财富守护经验',cred4:'La Nuit Shanghai 品牌打造与经营积累',
+    leadTag:'领导团队',leadTitle:'方向与执行，<br><em>同频协作。</em>',leadBody:'Taurux Group 由互补的领导能力共同推动：战略方向、严谨执行与长期关系建设。',jackyRole:'总裁及创始人',jackyBio:'Jacky 负责 Taurux Group 的战略方向。他评估新项目，判断机会与时机，并建立能够强化集团生态与长期成长的关键合作。',jackyBadge:'AGA Brossard 董事',rebeccaRole:'副总裁及联合创始人',rebeccaBio:'Rebecca 负责将战略转化为结果。她统筹 Taurux 业务组合中的执行、治理与项目落地，确保重点事项从规划走向可追踪、可落实的成果。',
+    contactTag:'联系我们',contactTitle:'让我们一起<br><em>创造长期价值。</em>',formName:'姓名',formCompany:'公司',formEmail:'邮箱',formPhone:'电话',formType:'咨询类型',formMessage:'留言',formSubmit:'发送信息',phName:'您的姓名',phCompany:'公司或机构',phMessage:'请简单介绍您的项目或合作需求……',opt1:'战略合作',opt2:'中加商业发展',opt3:'高端餐饮与体验服务',opt4:'商务会所 — Black Pearl',opt5:'财富规划与长期守护',opt6:'传媒传播',opt7:'教育合作',opt8:'一般咨询',ciTitle:'战略合作与商业发展洽询',ciHq:'总部',ciReach:'运营范围',ciReachVal:'魁北克 · 加拿大 · 中国<br><span style="font-size:12px;color:var(--mid)">专注中加商业发展与战略合作</span>',ciWork:'我们合作的对象',tagPartner:'战略合作伙伴',tagLocal:'本地企业',tagEntre:'企业家',tagIntl:'中加合作方',tagInst:'机构合作方',ciFocus:'运营重点',ciFocusVal:'平台搭建 · 战略合作 · 长期价值创造',privacy:'隐私政策',legal:'法律声明',rights:'版权所有。',formNotConnected:'正式上线前，这个联系表单还需要连接到真实邮箱或 CRM 系统。'
+  }
+};
+
+function setLang(lang){
+  const dict = translations[lang] || translations.en;
+  document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(dict[key] !== undefined) el.textContent = dict[key];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+    const key = el.getAttribute('data-i18n-html');
+    if(dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
+    const key = el.getAttribute('data-i18n-placeholder');
+    if(dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn=>btn.classList.toggle('active', btn.dataset.lang === lang));
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if(metaDesc){
+    if(lang === 'fr') metaDesc.setAttribute('content','Taurux Group est une société de portefeuille privée enracinée au Québec, axée sur la création de plateformes, l’intégration des ressources et la création de valeur durable.');
+    else if(lang === 'zh') metaDesc.setAttribute('content','Taurux Group 是一家扎根魁北克的私人控股集团，专注于平台搭建、资源整合、战略合作与长期价值创造。');
+    else metaDesc.setAttribute('content','Taurux Group is a private holding group rooted in Quebec, focused on platform building, resource integration, strategic partnerships, and long-term value creation.');
+  }
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>setLang(btn.dataset.lang)));
+
+const menuBtn = document.querySelector('.nav-menu-btn');
+const mobileMenu = document.getElementById('mobileMenu');
+function closeMobileMenu(){
+  if(!menuBtn || !mobileMenu) return;
+  menuBtn.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+  mobileMenu.classList.remove('open');
+  mobileMenu.setAttribute('aria-hidden','true');
+}
+if(menuBtn && mobileMenu){
+  menuBtn.addEventListener('click',()=>{
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuBtn.classList.toggle('open', isOpen);
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+    mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+  });
+  document.querySelectorAll('.mobile-link').forEach(link=>link.addEventListener('click', closeMobileMenu));
+  window.addEventListener('resize',()=>{ if(window.innerWidth > 980) closeMobileMenu(); });
+}
+
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+if(contactForm && formStatus){
+  contactForm.addEventListener('submit',(event)=>{
+    const action = contactForm.getAttribute('action');
+    if(!action || action.trim() === '' || action.includes('YOUR_')){
+      event.preventDefault();
+      formStatus.classList.add('error');
+      formStatus.textContent = translations[currentLang].formNotConnected;
+    }
+  });
+}
+
+</script>
+</body>
+</html>
