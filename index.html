@@ -117,6 +117,10 @@
     .eco-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:42px}
     .eco-card{background:var(--white);padding:34px 32px;transition:background .15s;min-height:220px}
     .eco-card:hover{background:var(--off)}
+    .eco-card.has-bg{background-image:linear-gradient(180deg,rgba(10,10,10,.58),rgba(10,10,10,.84)),var(--eco-bg);background-size:cover;background-position:center;color:var(--white);text-shadow:0 1px 12px rgba(0,0,0,.65)}
+    .eco-card.has-bg:hover{background-image:linear-gradient(180deg,rgba(10,10,10,.48),rgba(10,10,10,.76)),var(--eco-bg)}
+    .eco-card.has-bg .eco-name{color:var(--white)}
+    .eco-card.has-bg .eco-desc{color:rgba(255,255,255,.82)}
     .eco-card.full{grid-column:1/-1;min-height:auto}
     .eco-n{font-family:var(--serif);font-size:13px;color:var(--gold);margin-bottom:16px}
     .eco-name{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--black);margin-bottom:8px}
@@ -160,12 +164,12 @@
     .lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:42px}
     .lead-card{border:1px solid var(--border);border-radius:3px;overflow:hidden;background:var(--white)}
     .lead-top{height:160px;background:var(--off);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border)}
-    .lead-top.photo{height:260px;background:var(--black)}
-    .lead-photo{width:100%;height:100%;object-fit:cover;object-position:center 24%;display:block}
+    .lead-top.photo{height:260px;background:var(--black);overflow:hidden}
+    .lead-photo{width:100%;height:100%;object-fit:contain;object-position:center;display:block;transform:translateY(8px) scale(1.12);transform-origin:center top}
     .lead-avatar{width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:22px;font-weight:300;letter-spacing:.04em}
     .lead-avatar.dark{background:var(--black);color:var(--white)}
     .lead-avatar.light{background:var(--white);border:1px solid var(--border);color:var(--black)}
-    .lead-body{padding:26px}
+    .lead-body{position:relative;z-index:1;padding:26px;background:var(--white)}
     .lead-name{font-family:var(--serif);font-size:25px;font-weight:400;color:var(--black);margin-bottom:3px}
     .lead-role{font-size:11px;color:var(--mid);letter-spacing:.07em;text-transform:uppercase;margin-bottom:14px}
     .lead-bio{font-size:13px;font-weight:300;line-height:1.82;color:var(--mid)}
@@ -278,7 +282,7 @@
 <div class="site">
   <nav>
     <div class="wrap nav-inner">
-      <a class="nav-logo" href="#hero" aria-label="Taurux Group"><img class="nav-logo-img" src="assets/taurux-logo-gold.png" alt="Taurux Group" width="422" height="186" decoding="async"></a>
+      <a class="nav-logo" href="#hero" aria-label="Taurux Group"><img class="nav-logo-img" src="logo.png" alt="Taurux Group" width="1254" height="1254" decoding="async"></a>
       <button class="nav-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
       <div class="nav-links">
         <a class="nav-link" href="#about" data-i18n="navAbout">About</a>
@@ -406,17 +410,13 @@
         <h2 class="sec-title" data-i18n-html="ecoTitle">Five sectors.<br><em>One shared vision.</em></h2>
         <p class="sec-body" data-i18n="ecoBody">Each business inside Taurux Group is distinct in its market, yet connected by the same platform of resources, relationships, and long-term values.</p>
       </div>
-      <div class="portfolio-proof">
-        <div class="proof-intro">
-          <div class="proof-kicker" data-i18n="proofKicker">Portfolio Evidence</div>
-          <div class="proof-title" data-i18n="proofTitle">Operating platforms that make the ecosystem tangible.</div>
-        </div>
-        <div class="proof-grid">
-          <a class="proof-card has-bg" style="--proof-bg:url('assets/portfolio/la-nuit-shanghai.png')" href="https://lanuitshanghai.ca/en" target="_blank" rel="noopener noreferrer"><div><div class="proof-name">La Nuit Shanghai</div><div class="proof-meta" data-i18n="proof1Meta">Celebration · Cabaret · Events</div></div><div class="proof-text" data-i18n="proof1Text">A premium hospitality and celebration platform in Quartier DIX30.</div></a>
-          <a class="proof-card has-bg" style="--proof-bg:url('assets/portfolio/mitsuki.png')" href="https://mitsukisushi.com" target="_blank" rel="noopener noreferrer"><div><div class="proof-name">Mitsuki</div><div class="proof-meta" data-i18n="proof2Meta">Hospitality · Market Presence</div></div><div class="proof-text" data-i18n="proof2Text">A long-standing restaurant brand with over a decade of local market presence.</div></a>
-          <div class="proof-card has-bg" style="--proof-bg:url('assets/portfolio/rebecca-li.png')"><div><div class="proof-name">GTJ Wealth Stewardship</div><div class="proof-meta" data-i18n="proof3Meta">Planning · Protection · Stewardship</div></div><div class="proof-text" data-i18n="proof3Text">A long-term wealth stewardship platform serving individuals, families, and business owners.</div></div>
-          <div class="proof-card has-bg" style="--proof-bg:linear-gradient(135deg,#090909,#24201a 48%,#0d0d0d)"><div><div class="proof-name">Black Pearl</div><div class="proof-meta" data-i18n="proof4Meta">Private Business Club</div></div><div class="proof-text" data-i18n="proof4Text">A developing private business club concept built around trust, discretion, and high-value relationships.</div></div>
-        </div>
+      <div class="eco-grid">
+        <div class="eco-card has-bg" style="--eco-bg:url('assets/portfolio/la-nuit-shanghai.png')"><div class="eco-n">01</div><div class="eco-name" data-i18n="eco1Name">Hospitality & Experiences</div><div class="eco-desc" data-i18n="eco1Desc">Premium dining, entertainment, and celebration experiences that bring people together, from intimate evenings to large-scale events.</div><div class="eco-tags"><a class="eco-tag linked" href="https://lanuitshanghai.ca/en" target="_blank" rel="noopener noreferrer">La Nuit Shanghai ↗</a></div></div>
+        <div class="eco-card has-bg" style="--eco-bg:url('assets/portfolio/mitsuki.png')"><div class="eco-n">01</div><div class="eco-name" data-i18n="eco1Name">Hospitality & Experiences</div><div class="eco-desc" data-i18n="eco1Desc">Premium dining, entertainment, and celebration experiences that bring people together, from intimate evenings to large-scale events.</div><div class="eco-tags"><a class="eco-tag linked" href="https://mitsukisushi.com" target="_blank" rel="noopener noreferrer">Mitsuki ↗</a></div></div>
+        <div class="eco-card has-bg" style="--eco-bg:linear-gradient(135deg,#090909,#24201a 48%,#0d0d0d)"><div class="eco-n">02</div><div class="eco-name" data-i18n="eco2Name">Private Business Club</div><div class="eco-desc" data-i18n="eco2Desc">A curated environment for business leaders and entrepreneurs, built on trust, discretion, and the power of the right relationships.</div><div class="eco-tags"><span class="eco-tag">Black Pearl</span></div></div>
+        <div class="eco-card has-bg" style="--eco-bg:url('assets/portfolio/gtj-wealth-logo.jpg')"><div class="eco-n">03</div><div class="eco-name" data-i18n="eco3Name">Wealth Stewardship</div><div class="eco-desc" data-i18n="eco3Desc">Financial planning, protection, and long-term stewardship for individuals, families, and business owners who build with a generational perspective.</div><div class="eco-tags"><span class="eco-tag">GTJ Wealth Stewardship</span></div></div>
+        <div class="eco-card has-bg" style="--eco-bg:linear-gradient(135deg,#090909,#24201a 48%,#0d0d0d)"><div class="eco-n">04</div><div class="eco-name" data-i18n="eco4Name">Media & Communications</div><div class="eco-desc" data-i18n="eco4Desc">Strategic storytelling and communications that connect brands, businesses, and communities across languages and markets.</div><div class="eco-tags"><span class="eco-tag">Synera</span></div></div>
+        <div class="eco-card full has-bg" style="--eco-bg:linear-gradient(135deg,#090909,#24201a 48%,#0d0d0d)"><div class="eco-n">05</div><div class="eco-name" data-i18n="eco5Name">Education & Development</div><div class="eco-desc" data-i18n="eco5Desc">Through education-related partnerships and development initiatives, Taurux Group supports learning, professional growth, and community advancement.</div><div class="eco-tags"><span class="eco-tag" data-i18n="eco5Tag1">College Partnerships</span></div></div>
       </div>
 
     </div>
