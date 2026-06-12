@@ -25,7 +25,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500&display=swap"
 			rel="stylesheet"
 		/>
 		<style>
@@ -45,6 +45,20 @@
 				--deep: #111111;
 				--serif: 'Cormorant Garamond', serif;
 				--sans: 'DM Sans', sans-serif;
+			}
+			html[lang^='zh'] {
+				--serif: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+				--sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+			}
+			html[lang^='zh'] .hero-title,
+			html[lang^='zh'] .sec-title,
+			html[lang^='zh'] .phil-quote {
+				letter-spacing: 0;
+				line-height: 1.18;
+			}
+			html[lang^='zh'] .hero-title em,
+			html[lang^='zh'] .sec-title em {
+				font-style: normal;
 			}
 			html {
 				scroll-behavior: smooth;
@@ -161,8 +175,8 @@
 			}
 			.hero-grid {
 				display: grid;
-				grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
-				gap: 70px;
+				grid-template-columns: minmax(0, 760px);
+				gap: 0;
 				align-items: center;
 				padding: 92px 0 76px;
 			}
@@ -271,88 +285,6 @@
 				line-height: 1.5;
 			}
 
-			.symbol-card {
-				background: linear-gradient(145deg, #0a0a0a, #1a1917);
-				color: var(--white);
-				min-height: 500px;
-				border-radius: 3px;
-				position: relative;
-				overflow: hidden;
-				padding: 44px;
-				display: block;
-				box-shadow: 0 28px 70px rgba(0, 0, 0, 0.1);
-			}
-			.symbol-card::before {
-				content: '';
-				position: absolute;
-				width: 430px;
-				height: 430px;
-				border: 1px solid rgba(184, 155, 94, 0.2);
-				border-radius: 50%;
-				top: 42px;
-				right: -150px;
-				transform: rotate(-18deg);
-			}
-			.symbol-card::after {
-				content: '';
-				position: absolute;
-				width: 310px;
-				height: 310px;
-				border: 1px solid rgba(255, 255, 255, 0.045);
-				border-radius: 50%;
-				top: 118px;
-				right: -70px;
-				transform: rotate(20deg);
-			}
-			.symbol-mark {
-				position: absolute;
-				z-index: 1;
-				right: 42px;
-				top: 50%;
-				transform: translateY(-48%);
-				width: min(320px, 54%);
-				height: auto;
-				border: 0;
-				border-radius: 0;
-				display: block;
-			}
-			.symbol-mark img {
-				display: block;
-				width: 100%;
-				height: auto;
-				filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.3));
-			}
-			.symbol-line {
-				position: absolute;
-				z-index: 0;
-				width: 62%;
-				height: 1px;
-				background: linear-gradient(90deg, transparent, rgba(184, 155, 94, 0.42), transparent);
-				top: 58%;
-				left: 27%;
-				transform: rotate(-22deg);
-			}
-			.symbol-bottom {
-				position: absolute;
-				z-index: 2;
-				left: 46px;
-				bottom: 72px;
-				width: min(230px, 40%);
-			}
-			.symbol-title {
-				font-family: var(--serif);
-				font-size: 30px;
-				font-weight: 300;
-				line-height: 1.15;
-				margin-bottom: 14px;
-				color: var(--white);
-			}
-			.symbol-body {
-				font-size: 12.5px;
-				line-height: 1.8;
-				color: #aaa;
-				max-width: 230px;
-			}
 
 			section {
 				border-bottom: 1px solid var(--border);
@@ -1189,32 +1121,6 @@
 					grid-template-columns: 1fr;
 					gap: 42px;
 				}
-				.symbol-card {
-					min-height: 420px;
-					display: block;
-					padding: 38px;
-				}
-				.symbol-mark {
-					position: relative;
-					right: auto;
-					top: auto;
-					transform: none;
-					width: 230px;
-					max-width: 64%;
-					margin-bottom: 34px;
-				}
-				.symbol-bottom {
-					position: relative;
-					left: auto;
-					bottom: auto;
-					width: min(100%, 360px);
-				}
-				.symbol-title {
-					font-size: 31px;
-				}
-				.symbol-body {
-					max-width: 360px;
-				}
 				.hero-title {
 					font-size: 58px;
 				}
@@ -1343,46 +1249,6 @@
 				.lang-cell:last-child {
 					border-bottom: 0;
 				}
-				.symbol-card {
-					min-height: auto;
-					padding: 28px 24px 30px;
-				}
-				.symbol-mark {
-					width: 150px;
-					max-width: 52%;
-					margin: 0 0 22px 0;
-				}
-				.symbol-bottom {
-					position: relative;
-					left: auto;
-					bottom: auto;
-					width: 100%;
-					max-width: 280px;
-				}
-				.symbol-title {
-					font-size: 24px;
-					line-height: 1.14;
-					margin-bottom: 12px;
-				}
-				.symbol-body {
-					font-size: 14px;
-					line-height: 1.6;
-					max-width: 280px;
-				}
-				.symbol-card::before {
-					width: 260px;
-					height: 260px;
-					right: -90px;
-					top: 80px;
-					opacity: 0.6;
-				}
-				.symbol-card::after {
-					width: 180px;
-					height: 180px;
-					right: -50px;
-					top: 130px;
-					opacity: 0.35;
-				}
 				.proof-intro {
 					display: block;
 					padding: 24px;
@@ -1486,27 +1352,6 @@
 							<div class="trust-item">
 								<div class="trust-num">04</div>
 								<div class="trust-label" data-i18n="trust4">Long-term value</div>
-							</div>
-						</div>
-					</div>
-					<div class="symbol-card" aria-label="Taurux visual concept">
-						<div class="symbol-line"></div>
-						<div class="symbol-mark">
-							<img
-								src="assets/taurux-mark-gold.png"
-								alt="Taurux Group mark"
-								width="498"
-								height="469"
-								loading="lazy"
-								decoding="async"
-							/>
-						</div>
-						<div class="symbol-bottom">
-							<div class="symbol-title" data-i18n-html="symbolTitle">
-								Strength.<br />Stability.<br />Stewardship.
-							</div>
-							<div class="symbol-body" data-i18n="symbolBody">
-								Built on disciplined growth, trusted relationships, and long-term value creation.
 							</div>
 						</div>
 					</div>
@@ -1692,7 +1537,7 @@
 							<div class="eco-tags"><span class="eco-tag">Synera</span></div>
 						</div>
 						<div
-							class="eco-card full has-bg"
+							class="eco-card has-bg"
 							style="--eco-bg: linear-gradient(135deg, #090909, #24201a 48%, #0d0d0d)"
 						>
 							<div class="eco-n">05</div>
@@ -2003,8 +1848,6 @@
 					trust2: 'Resource integration',
 					trust3: 'Strategic partnerships',
 					trust4: 'Long-term value',
-					symbolTitle: 'Strength.<br>Stability.<br>Stewardship.',
-					symbolBody: 'Built on disciplined growth, trusted relationships, and long-term value creation.',
 					aboutTag: 'Who We Are',
 					aboutTitle:
 						'A value-driven group built<br>to connect people, businesses,<br><em>and opportunity.</em>',
@@ -2166,9 +2009,6 @@
 					trust2: 'Intégration des ressources',
 					trust3: 'Partenariats stratégiques',
 					trust4: 'Valeur durable',
-					symbolTitle: 'Force.<br>Stabilité.<br>Responsabilité.',
-					symbolBody:
-						'Créer une valeur durable grâce à une croissance maîtrisée, à des relations de confiance et à une vision à long terme.',
 					aboutTag: 'Qui nous sommes',
 					aboutTitle:
 						'Un groupe guidé par la valeur,<br>conçu pour relier les personnes,<br>les entreprises <em>et les occasions.</em>',
@@ -2332,8 +2172,6 @@
 					trust2: '资源整合',
 					trust3: '战略合作',
 					trust4: '长期价值',
-					symbolTitle: '力量。<br>稳健。<br>守护。',
-					symbolBody: '以稳健成长、信任关系与长期承诺，创造可持续价值。',
 					aboutTag: '我们是谁',
 					aboutTitle: '以价值为核心，<br>连接人、企业<br><em>与机会。</em>',
 					aboutBody:
