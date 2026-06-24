@@ -9,12 +9,15 @@
 <meta property="og:title" content="Taurux Group" />
 <meta property="og:description" content="Building platforms. Bridging resources. Creating lasting value." />
 <meta property="og:image" content="taurux_v7_redesign_assets/logo_board.png" />
+<link rel="stylesheet" href="taurux_v7_redesign_assets/fonts/fonts.css">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
 :root {
   --black:#090908; --black2:#11100e; --ivory:#f7f1e7; --ivory2:#fbf7ef; --paper:#fffaf1; --gold:#b88d3f; --gold2:#d7b56d; --gray:#6e6a61; --line:#e2d7c4; --darkline:#2d2923;
-  --serif:'Helvetica Neue','Aptos Display',Arial,sans-serif;
-  --sans:'Helvetica Neue','Aptos','PingFang SC','Microsoft YaHei UI','Noto Sans SC',Arial,sans-serif;
+  --shanghai-body:"Jost",sans-serif;
+  --shanghai-accent:"Cinzel",serif;
+  --serif:var(--shanghai-body);
+  --sans:var(--shanghai-body);
 }
 *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--ivory2);color:var(--black);font-family:var(--sans);} a{color:inherit;text-decoration:none} img{max-width:100%;display:block} .wrap{width:min(1180px,calc(100% - 48px));margin:0 auto} .gold{color:var(--gold)}
 .header{position:sticky;top:0;z-index:100;background:rgba(251,247,239,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,141,63,.22)}
@@ -38,9 +41,9 @@
 
 
 /* V7.1 refined multilingual typography and layout system */
-html[lang="en"]{--serif:'Helvetica Neue','Aptos Display',Arial,sans-serif;--sans:'Helvetica Neue','Aptos',Arial,sans-serif;}
-html[lang="fr"]{--serif:'Helvetica Neue','Aptos Display',Arial,sans-serif;--sans:'Helvetica Neue','Aptos',Arial,sans-serif;}
-html[lang="zh"]{--serif:'PingFang SC','Microsoft YaHei UI','Microsoft YaHei','Noto Sans SC',Arial,sans-serif;--sans:'PingFang SC','Microsoft YaHei UI','Microsoft YaHei','Noto Sans SC',Arial,sans-serif;}
+html[lang="en"]{--serif:var(--shanghai-body);--sans:var(--shanghai-body);}
+html[lang="fr"]{--serif:var(--shanghai-body);--sans:var(--shanghai-body);}
+html[lang="zh"]{--serif:var(--shanghai-body);--sans:var(--shanghai-body);}
 html[lang="zh"] h1,html[lang="zh"] h2,html[lang="zh"] h3{font-weight:600;letter-spacing:-.018em;}
 html[lang="zh"] p,html[lang="zh"] .lead,html[lang="zh"] input,html[lang="zh"] textarea,html[lang="zh"] select{line-height:1.86;}
 html[lang="fr"] h1{font-size:clamp(48px,6.2vw,88px);letter-spacing:-.025em;line-height:1.02;}
@@ -109,14 +112,14 @@ html[lang="fr"] .lead,html[lang="fr"] p{line-height:1.78;}
    Purpose: simple, generous, modern, refined typography
    ========================================================= */
 :root{
-  --font-en-heading:"Helvetica Neue","Aptos",Arial,sans-serif;
-  --font-fr-heading:"Helvetica Neue","Aptos",Arial,sans-serif;
-  --font-zh-heading:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;
-  --font-en-body:"Helvetica Neue","Aptos",Arial,sans-serif;
-  --font-fr-body:"Helvetica Neue","Aptos",Arial,sans-serif;
-  --font-zh-body:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;
-  --serif:"Helvetica Neue","Aptos",Arial,sans-serif;
-  --sans:"Helvetica Neue","Aptos","PingFang SC","Microsoft YaHei UI","Noto Sans SC",Arial,sans-serif;
+  --font-en-heading:var(--shanghai-body);
+  --font-fr-heading:var(--shanghai-body);
+  --font-zh-heading:var(--shanghai-body);
+  --font-en-body:var(--shanghai-body);
+  --font-fr-body:var(--shanghai-body);
+  --font-zh-body:var(--shanghai-body);
+  --serif:var(--shanghai-body);
+  --sans:var(--shanghai-body);
 }
 body{font-family:var(--font-en-body);font-weight:400;letter-spacing:-.006em;}
 html[lang="zh"] body{font-family:var(--font-zh-body);letter-spacing:0;}
@@ -270,12 +273,12 @@ html[lang="fr"] .section-head p{max-width:760px !important;}
    Purpose: simple, dignified, premium; black header + complete logo
    ========================================================= */
 :root{
-  --font-en-heading:"Manrope","Helvetica Neue","Helvetica",Arial,sans-serif;
-  --font-fr-heading:"Manrope","Helvetica Neue","Helvetica",Arial,sans-serif;
-  --font-zh-heading:"PingFang SC","Noto Sans SC","Microsoft YaHei UI","Microsoft YaHei",sans-serif;
-  --font-en-body:"Manrope","Helvetica Neue","Helvetica",Arial,sans-serif;
-  --font-fr-body:"Manrope","Helvetica Neue","Helvetica",Arial,sans-serif;
-  --font-zh-body:"PingFang SC","Noto Sans SC","Microsoft YaHei UI","Microsoft YaHei",sans-serif;
+  --font-en-heading:var(--shanghai-body);
+  --font-fr-heading:var(--shanghai-body);
+  --font-zh-heading:var(--shanghai-body);
+  --font-en-body:var(--shanghai-body);
+  --font-fr-body:var(--shanghai-body);
+  --font-zh-body:var(--shanghai-body);
   --serif:var(--font-en-heading);
   --sans:var(--font-en-body);
   --header-black:#080807;
@@ -343,16 +346,16 @@ html[lang="zh"] .section-head p{line-height:2;}
 
 /* =========================================================
    V7.3.1 Correction — authoritative final override
-   Scope: black header, complete logo, clean system typography,
+   Scope: black header, complete logo, Shanghai typography,
    unified 3-line hero headline without punctuation.
    ========================================================= */
 :root{
-  --font-en-heading:"Helvetica Neue","Aptos Display",Arial,sans-serif;
-  --font-fr-heading:"Helvetica Neue","Aptos Display",Arial,sans-serif;
-  --font-zh-heading:"PingFang SC","Microsoft YaHei UI","Microsoft YaHei","Noto Sans SC",Arial,sans-serif;
-  --font-en-body:"Helvetica Neue","Aptos",Arial,sans-serif;
-  --font-fr-body:"Helvetica Neue","Aptos",Arial,sans-serif;
-  --font-zh-body:"PingFang SC","Microsoft YaHei UI","Microsoft YaHei","Noto Sans SC",Arial,sans-serif;
+  --font-en-heading:var(--shanghai-body);
+  --font-fr-heading:var(--shanghai-body);
+  --font-zh-heading:var(--shanghai-body);
+  --font-en-body:var(--shanghai-body);
+  --font-fr-body:var(--shanghai-body);
+  --font-zh-body:var(--shanghai-body);
   --serif:var(--font-en-heading);
   --sans:var(--font-en-body);
   --header-black:#080807;
@@ -387,9 +390,9 @@ html[lang="zh"] h1,html[lang="zh"] h2,html[lang="zh"] h3{letter-spacing:.04em;fo
   object-position:center !important;
   display:block !important;
 }
-.nav-links a{color:rgba(247,241,231,.76) !important;font-family:var(--font-en-body) !important;font-size:13px !important;font-weight:500;}
+.nav-links a{color:rgba(247,241,231,.76) !important;font-family:var(--shanghai-accent) !important;font-size:13px !important;font-weight:500;}
 .nav-links a:hover{color:#fffaf1 !important;}
-.langs{color:rgba(247,241,231,.58) !important;font-family:var(--font-en-body) !important;}
+.langs{color:rgba(247,241,231,.58) !important;font-family:var(--shanghai-accent) !important;}
 .langs button{color:rgba(247,241,231,.74) !important;font-weight:500 !important;}
 .langs button.active{color:var(--gold2) !important;font-weight:700 !important;}
 .cta-small{background:linear-gradient(135deg,#b48a3b,#d6b46a) !important;color:#0a0907 !important;border:1px solid rgba(255,255,255,.12) !important;box-shadow:none !important;}
@@ -411,7 +414,8 @@ p,.lead{font-family:var(--sans) !important;}
 html[lang="zh"] p,html[lang="zh"] .lead{line-height:1.9;}
 .section-head{display:block !important;max-width:800px !important;margin-bottom:80px !important;}
 .section-head p{max-width:720px;margin-top:20px !important;}
-input,textarea,select,.btn,.small-link,.role,.eyebrow,.section-kicker{font-family:var(--sans) !important;}
+input,textarea,select{font-family:var(--sans) !important;}
+.btn,.small-link,.role,.eyebrow,.section-kicker,.team-block-title,.record-group-label,.cta-small{font-family:var(--shanghai-accent) !important;}
 .footer{background:#090908 !important;}
 .footer img{height:auto !important;width:178px !important;object-fit:contain !important;}
 @media(max-width:980px){
@@ -462,12 +466,29 @@ input,textarea,select,.btn,.small-link,.role,.eyebrow,.section-kicker{font-famil
   filter:saturate(.9) contrast(1.04);
 }
 .media-slider img{
-  position:absolute;
-  inset:0;
-  opacity:0;
-  transition:opacity .8s ease;
+  flex:0 0 100%;
+  min-width:100%;
+  opacity:1;
+  transition:none;
+}
+.media-slider-track{
+  display:flex;
+  height:100%;
+  width:100%;
+  transform:translate3d(0,0,0);
+  transition:transform .75s cubic-bezier(.22,.61,.36,1);
+  will-change:transform;
+}
+.media-slider-track.is-instant{transition:none;}
+.media-slider-track img{
+  position:relative;
+  inset:auto;
+  height:100%;
 }
 .media-slider img.is-active{opacity:1;}
+@media(prefers-reduced-motion:reduce){
+  .media-slider-track{transition:none;}
+}
 .logo-media{
   display:flex;
   align-items:center;
@@ -512,12 +533,68 @@ input,textarea,select,.btn,.small-link,.role,.eyebrow,.section-kicker{font-famil
 .record-row.combined{grid-template-columns:repeat(3,minmax(0,1fr));}
 .record-row.combined .stat .num{font-size:clamp(60px,6vw,96px);}
 .global-section .global-grid{grid-template-columns:1fr;max-width:920px;}
+.team-carousel{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  --team-gap:2px;
+  --team-card-width:calc((100% - 6px) / 4);
+  padding:4px 0 12px;
+}
+.team-track{
+  display:flex;
+  gap:var(--team-gap);
+  width:100%;
+  transform:translate3d(0,0,0);
+  transition:transform .5s ease;
+  will-change:transform;
+}
+.team-track.is-instant{transition:none;}
+.team-carousel .lead-card,
+.team-carousel .person{
+  flex:0 0 var(--team-card-width);
+  width:var(--team-card-width);
+  min-width:0;
+  min-height:0;
+  display:flex;
+  flex-direction:column;
+  border:1px solid var(--line);
+  background:#fffaf1;
+  overflow:hidden;
+  box-shadow:none;
+}
+.team-carousel .lead-card img,
+.team-carousel .person img{
+  width:100%;
+  height:auto !important;
+  flex:0 0 auto;
+  object-fit:contain;
+  object-position:50% 50%;
+  transform:none;
+}
+.team-carousel .lead-card:hover img,
+.team-carousel .person:hover img{transform:none;filter:saturate(.82) contrast(1.05) brightness(.94);}
+.team-carousel .lead-info,
+.team-carousel .info{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  padding:28px;
+}
+.team-carousel .lead-info p:last-child,
+.team-carousel .info .small-link{margin-top:auto;}
+.team-carousel .lead-card p,
+.team-carousel .person p{font-size:14px;line-height:1.7;}
+@media(prefers-reduced-motion:reduce){
+  .team-track{transition:none;transform:none;}
+}
 @media(max-width:980px){
   .hero{padding:76px 0 42px !important;}
   .eco-layout,.eco-grid{grid-template-columns:1fr !important;}
   .ecosystem-card.wide-card{grid-column:auto;}
   .ecosystem-media,.eco-layout .ecosystem-media{height:320px;}
   .record-row.combined{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .team-carousel{--team-card-width:calc((100% - 2px) / 2);}
 }
 @media(max-width:640px){
   .hero{padding:64px 0 36px !important;}
@@ -527,6 +604,9 @@ input,textarea,select,.btn,.small-link,.role,.eyebrow,.section-kicker{font-famil
   .brand-pair a{border-right:0;border-bottom:1px solid var(--line);padding:18px 0;}
   .brand-pair a:last-child{border-bottom:0;padding-left:0;}
   .record-row.combined{grid-template-columns:1fr;}
+  .team-carousel{--team-card-width:100%;}
+  .team-carousel .lead-info,
+  .team-carousel .info{padding:24px;}
 }
 </style>
 </head>
@@ -625,13 +705,16 @@ input,textarea,select,.btn,.small-link,.role,.eyebrow,.section-kicker{font-famil
 </section>
 <section class="section team" id="team">
   <div class="wrap"><div class="section-head" data-reveal><div><div class="section-kicker" data-i18n="team_kicker">团队</div><h2 data-i18n="team_title">领导团队与核心成员</h2></div><p data-i18n="team_sub">真实团队，是集团生态持续运转的基础。</p></div>
-  <div class="team-block-title" data-i18n="team_leadership">Leadership</div>
-  <div class="team-grid" data-reveal>
-  <article class="lead-card"><img src="taurux_v7_redesign_assets/team/team_jacky.jpg" alt="Jacky Lin"><div class="lead-info"><div class="role" data-i18n="title_jacky">总裁及创始人</div><h4>Jacky Lin</h4><p class="resp-text" data-zh="战略方向 · 商业发展 · 合作关系 · 餐饮体验业务成长 · 中加资源连接" data-en="Strategic direction · Business development · Partnership building · Hospitality growth · Canada–China resource connection" data-fr="Orientation stratégique · Développement d’affaires · Partenariats · Croissance en hospitalité · Connexion Canada–Chine">战略方向 · 商业发展 · 合作关系 · 餐饮体验业务成长 · 中加资源连接</p><p><a class="small-link" href="#" onclick="openPerson('jacky');return false;" data-i18n="learn_more">了解更多 →</a></p></div></article><article class="lead-card"><img src="taurux_v7_redesign_assets/team_rebecca.png" alt="Rebecca Li"><div class="lead-info"><div class="role" data-i18n="title_rebecca">副总裁及联合创始人</div><h4>Rebecca Li</h4><p class="resp-text" data-zh="集团执行 · 战略规划 · 财富守护 · 治理 · 合作跟进 · 长期价值发展" data-en="Group execution · Strategic planning · Wealth stewardship · Governance · Partnership follow-up · Long-term value development" data-fr="Exécution du groupe · Planification stratégique · Accompagnement patrimonial · Gouvernance · Suivi des partenariats · Développement de valeur durable">集团执行 · 战略规划 · 财富守护 · 治理 · 合作跟进 · 长期价值发展</p><p><a class="small-link" href="#" onclick="openPerson('rebecca');return false;" data-i18n="learn_more">了解更多 →</a></p></div></article>
-  </div>
-  <div class="team-block-title" data-i18n="team_key">Key Team Members</div>
-  <div class="team-small" data-reveal>
-  <article class="person"><img src="taurux_v7_redesign_assets/team/team_pablo.jpg" alt="Pablo Derbez"><div class="info"><div class="role" data-i18n="title_pablo">总经理</div><h4>Pablo Derbez</h4><p class="resp-text" data-zh="日常运营 · 团队协调 · 场地准备 · 活动落地 · 客户体验一致性" data-en="Daily operations · Team coordination · Venue readiness · Event delivery · Guest experience consistency" data-fr="Opérations quotidiennes · Coordination d’équipe · Préparation des lieux · Exécution d’événements · Cohérence de l’expérience client">日常运营 · 团队协调 · 场地准备 · 活动落地 · 客户体验一致性</p><a class="small-link" href="#" onclick="openPerson('pablo');return false;" data-i18n="learn_more">了解更多 →</a></div></article><article class="person"><img src="taurux_v7_redesign_assets/team/team_rim.jpg" alt="Rim Bahadi"><div class="info"><div class="role" data-i18n="title_rim">客户服务经理</div><h4>Rim Bahadi</h4><p class="resp-text" data-zh="客户沟通 · 宾客关系 · 服务标准 · 活动支持 · 体验跟进" data-en="Client communication · Guest relations · Service standards · Event support · Experience follow-up" data-fr="Communication client · Relations invités · Standards de service · Soutien aux événements · Suivi de l’expérience">客户沟通 · 宾客关系 · 服务标准 · 活动支持 · 体验跟进</p><a class="small-link" href="#" onclick="openPerson('rim');return false;" data-i18n="learn_more">了解更多 →</a></div></article><article class="person"><img src="taurux_v7_redesign_assets/team/team_david.jpg" alt="David Lee"><div class="info"><div class="role" data-i18n="title_david">财务总监</div><h4>David Lee</h4><p class="resp-text" data-zh="财务管理 · 预算协调 · 成本控制 · 财务报告 · 内部流程规范" data-en="Financial coordination · Budgeting · Cost control · Reporting · Internal process discipline" data-fr="Coordination financière · Budgétisation · Contrôle des coûts · Rapports · Processus internes">财务管理 · 预算协调 · 成本控制 · 财务报告 · 内部流程规范</p><a class="small-link" href="#" onclick="openPerson('david');return false;" data-i18n="learn_more">了解更多 →</a></div></article><article class="person"><img src="taurux_v7_redesign_assets/team/team_rafael.jpg" alt="Rafael Jean-Joseph"><div class="info"><div class="role" data-i18n="title_rafael">行政总厨</div><h4>Rafael Jean-Joseph</h4><p class="resp-text" data-zh="餐饮出品 · 菜单研发 · 厨房团队 · 活动餐饮体验 · 品牌出品标准" data-en="Culinary direction · Menu development · Kitchen leadership · Event dining · Brand culinary standards" data-fr="Direction culinaire · Développement de menus · Leadership cuisine · Expérience événementielle · Standards culinaires">餐饮出品 · 菜单研发 · 厨房团队 · 活动餐饮体验 · 品牌出品标准</p><a class="small-link" href="#" onclick="openPerson('rafael');return false;" data-i18n="learn_more">了解更多 →</a></div></article>
+  <div class="team-block-title" data-i18n="team_leadership">Leadership & Core Team</div>
+  <div class="team-carousel" data-team-carousel data-reveal>
+    <div class="team-track">
+      <article class="lead-card"><img src="taurux_v7_redesign_assets/team/team_jacky.jpg" alt="Jacky Lin"><div class="lead-info"><div class="role" data-i18n="title_jacky">总裁及创始人</div><h4>Jacky Lin</h4><p class="resp-text" data-zh="战略方向 · 商业发展 · 合作关系 · 餐饮体验业务成长 · 中加资源连接" data-en="Strategic direction · Business development · Partnership building · Hospitality growth · Canada–China resource connection" data-fr="Orientation stratégique · Développement d’affaires · Partenariats · Croissance en hospitalité · Connexion Canada–Chine">战略方向 · 商业发展 · 合作关系 · 餐饮体验业务成长 · 中加资源连接</p><p><a class="small-link" href="#" onclick="openPerson('jacky');return false;" data-i18n="learn_more">了解更多 →</a></p></div></article>
+      <article class="lead-card"><img src="taurux_v7_redesign_assets/team_rebecca.png" alt="Rebecca Li"><div class="lead-info"><div class="role" data-i18n="title_rebecca">副总裁及联合创始人</div><h4>Rebecca Li</h4><p class="resp-text" data-zh="集团执行 · 战略规划 · 财富守护 · 治理 · 合作跟进 · 长期价值发展" data-en="Group execution · Strategic planning · Wealth stewardship · Governance · Partnership follow-up · Long-term value development" data-fr="Exécution du groupe · Planification stratégique · Accompagnement patrimonial · Gouvernance · Suivi des partenariats · Développement de valeur durable">集团执行 · 战略规划 · 财富守护 · 治理 · 合作跟进 · 长期价值发展</p><p><a class="small-link" href="#" onclick="openPerson('rebecca');return false;" data-i18n="learn_more">了解更多 →</a></p></div></article>
+      <article class="person"><img src="taurux_v7_redesign_assets/team/team_pablo.jpg" alt="Pablo Derbez"><div class="info"><div class="role" data-i18n="title_pablo">总经理</div><h4>Pablo Derbez</h4><p class="resp-text" data-zh="日常运营 · 团队协调 · 场地准备 · 活动落地 · 客户体验一致性" data-en="Daily operations · Team coordination · Venue readiness · Event delivery · Guest experience consistency" data-fr="Opérations quotidiennes · Coordination d’équipe · Préparation des lieux · Exécution d’événements · Cohérence de l’expérience client">日常运营 · 团队协调 · 场地准备 · 活动落地 · 客户体验一致性</p><a class="small-link" href="#" onclick="openPerson('pablo');return false;" data-i18n="learn_more">了解更多 →</a></div></article>
+      <article class="person"><img src="taurux_v7_redesign_assets/team/team_rim.jpg" alt="Rim Bahadi"><div class="info"><div class="role" data-i18n="title_rim">客户服务经理</div><h4>Rim Bahadi</h4><p class="resp-text" data-zh="客户沟通 · 宾客关系 · 服务标准 · 活动支持 · 体验跟进" data-en="Client communication · Guest relations · Service standards · Event support · Experience follow-up" data-fr="Communication client · Relations invités · Standards de service · Soutien aux événements · Suivi de l’expérience">客户沟通 · 宾客关系 · 服务标准 · 活动支持 · 体验跟进</p><a class="small-link" href="#" onclick="openPerson('rim');return false;" data-i18n="learn_more">了解更多 →</a></div></article>
+      <article class="person"><img src="taurux_v7_redesign_assets/team/team_david.jpg" alt="David Lee"><div class="info"><div class="role" data-i18n="title_david">财务总监</div><h4>David Lee</h4><p class="resp-text" data-zh="财务管理 · 预算协调 · 成本控制 · 财务报告 · 内部流程规范" data-en="Financial coordination · Budgeting · Cost control · Reporting · Internal process discipline" data-fr="Coordination financière · Budgétisation · Contrôle des coûts · Rapports · Processus internes">财务管理 · 预算协调 · 成本控制 · 财务报告 · 内部流程规范</p><a class="small-link" href="#" onclick="openPerson('david');return false;" data-i18n="learn_more">了解更多 →</a></div></article>
+      <article class="person"><img src="taurux_v7_redesign_assets/team/team_rafael.jpg" alt="Rafael Jean-Joseph"><div class="info"><div class="role" data-i18n="title_rafael">行政总厨</div><h4>Rafael Jean-Joseph</h4><p class="resp-text" data-zh="餐饮出品 · 菜单研发 · 厨房团队 · 活动餐饮体验 · 品牌出品标准" data-en="Culinary direction · Menu development · Kitchen leadership · Event dining · Brand culinary standards" data-fr="Direction culinaire · Développement de menus · Leadership cuisine · Expérience événementielle · Standards culinaires">餐饮出品 · 菜单研发 · 厨房团队 · 活动餐饮体验 · 品牌出品标准</p><a class="small-link" href="#" onclick="openPerson('rafael');return false;" data-i18n="learn_more">了解更多 →</a></div></article>
+    </div>
   </div>
   </div>
 </section>
@@ -640,7 +723,7 @@ input,textarea,select,.btn,.small-link,.role,.eyebrow,.section-kicker{font-famil
 <footer class="footer"><div class="wrap footer-grid"><div><img src="taurux_v7_redesign_assets/taurux_logo_gold_nav_safe.png" alt="Taurux Group"><small data-i18n="footer_rights">© 2026 Taurux Group. 保留所有权利。</small></div><div><a href="#about" data-i18n="nav_about">我们是谁</a><a href="#ecosystem" data-i18n="nav_eco">集团生态</a><a href="#global" data-i18n="nav_global">全球连接</a><a href="#record" data-i18n="nav_record">真实积累</a><a href="#team" data-i18n="nav_team">团队</a><a href="#contact" data-i18n="nav_contact">联系</a></div><div><a href="privacy-policy.html" data-i18n="footer_privacy">隐私政策</a><a href="legal-notice.html" data-i18n="footer_legal">法律声明</a></div></div></footer>
 <div class="modal" id="modal"><div class="modal-card"><button class="modal-close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
 <script>
-const I18N = {"zh": {"nav_about": "我们是谁", "nav_eco": "集团生态", "nav_global": "全球连接", "nav_record": "真实积累", "nav_team": "团队", "nav_contact": "联系", "nav_cta": "合作洽询", "eyebrow": "TAURUX GROUP — 加拿大 · 魁北克", "hero_title": "搭建平台<br>连接资源<br>创造长期价值", "hero_body": "TAURUX GROUP 是一家总部位于加拿大、面向全球合作的产业生态控股集团。我们专注于平台建设、资源整合、战略合作与长期价值创造，连接人才、资本、品牌、企业与商业机会。", "hero_note": "我们相信，真正有价值的企业，不只是经营单一业务，而是建立一个能够持续连接资源、创造机会、推动成长的生态平台。", "hero_dirs": "餐饮体验 · 私人商务网络 · 财富守护 · 非营利跨界合作 · 教育与人才发展", "hero_btn1": "了解业务生态", "hero_btn2": "洽谈合作", "hero_tag": "Building Platforms · Bridging Resources · Creating Lasting Value", "eco_title": "集团生态", "eco_sub": "一个正在生长的产业生态，连接真实品牌、真实场景与长期价值。", "hospitality": "高端餐饮与体验服务", "hospitality_body": "Taurux Group 的 hospitality 基础来自真实餐饮、娱乐、庆祝、活动与客户体验运营。La Nuit Shanghai 是庆祝日目的地，承办私人聚会、企业活动、商务活动与沉浸式餐饮体验；Mitsuki 是面向大众消费市场的成熟餐饮品牌，服务家庭聚餐、朋友聚会、团队用餐与日常休闲消费场景。", "visit_lns": "访问 La Nuit Shanghai", "visit_mitsuki": "访问 Mitsuki", "image_pending": "此处预留官方品牌照片位置", "club": "Taurux Private Business Club", "club_tag": "高质量关系，创造高质量机会。", "club_body": "面向企业家、投资人、行业领袖与高端专业人士的私人商务连接平台。商业合作的核心，始终建立在信任、私密性、价值共识与长期关系之上。", "partnership": "合作洽询", "gtj": "GTJ Wealth Stewardship", "gtj_tag": "保护财富，规划未来，传承价值。", "gtj_body": "GTJ Wealth Stewardship 是生态中的财富守护与长期规划板块，服务企业家、高净值家庭与长期资产持有人，关注风险管理、资产保护、家庭保障、企业家财富架构与家族传承。由持牌专业团队根据适用法律法规提供相关服务；涉及税务、投融资、投资管理及其他专业领域时，将协同具备相应资质的专业人士或注册机构提供支持。", "learn_more": "了解更多", "synera": "Synera", "synera_tag": "非营利跨界合作平台", "synera_body": "Synera 是正式注册非营利跨界合作平台，致力于连接企业、商协会、创业者、专业人士、教育机构、社会组织与国际资源。", "visit_synera": "访问 Synera", "edu": "教育与人才发展", "edu_tag": "教育培养人才，人才创造未来。", "edu_body": "Taurux Group 支持教育与人才发展，关注双语教育、职业培训、专业能力建设、语言发展与长期人才成长。相关教育合作资源位于蒙特利尔南岸，具备开展 ACS 与 DVS 项目的授权条件；网站不公开具体学校名称。", "edu_inq": "教育合作咨询", "global_title": "连接加拿大、中国与国际机会", "global_body": "TAURUX GROUP 立足加拿大，深耕魁北克本地市场，同时连接中国与国际商业资源。我们的目标不是简单地介绍资源，而是帮助资源之间建立信任、形成合作，并创造长期价值。", "canada": "加拿大 · 魁北克", "canada_body": "深耕本地商业环境，建立稳定运营基础。", "china": "连接中国", "china_body": "连接市场活力、企业资源与跨文化合作机会。", "global": "面向全球", "global_body2": "以国际化视野整合资源，推动长期增长。", "record_title": "真实积累", "record_sub": "建立在真实运营经验之上，而不是承诺之上。", "record_body": "我们的生态不是概念，而是从实际项目、真实客户、长期合作与持续经营中逐步建立起来的。", "record_group_1": "经营积累", "record_group_2": "真实客户与活动成果", "team_leadership": "Leadership / 领导层", "team_key": "Key Team Members / 核心成员", "r1": "年餐饮、娱乐与 hospitality 相关经验", "r2": "年 Mitsuki 成熟餐饮品牌运营基础", "r3": "年 GTJ Wealth Stewardship 专业积累", "r4": "年 La Nuit Shanghai 品牌建设", "r5": "位客人在 La Nuit Shanghai 庆祝特别纪念日", "r6": "场企业活动与商务活动", "values_title": "核心价值观", "v1": "诚信为本", "v1b": "信任是一切合作的基础。我们坚持真实、透明、稳健与长期主义。", "v2": "合作共赢", "v2b": "真正的价值往往产生于资源之间的连接与协同。", "v3": "追求卓越", "v3b": "从品牌体验到专业服务，我们始终追求更高标准。", "v4": "持续创新", "v4b": "用新的方式连接人、企业、资源与机会。", "v5": "创造影响力", "v5b": "不只创造商业价值，也创造人才、社区与社会影响力。", "team_title": "领导团队与核心成员", "team_sub": "真实团队，是集团生态持续运转的基础。", "resp": "职责", "badge": "AGA Brossard — Board Director", "contact_title": "让我们一起创造长期价值。", "contact_body": "欢迎与我们联系，开启合作对话。", "name": "姓名 / Name", "company": "公司 / Company", "email": "邮箱 / Email", "phone": "电话 / Phone", "message": "留言 / Message", "submit": "提交咨询", "footer_privacy": "隐私政策", "footer_legal": "法律声明", "footer_rights": "© 2026 Taurux Group. All rights reserved."}, "en": {"nav_about": "About", "nav_eco": "Ecosystem", "nav_global": "Global Reach", "nav_record": "Track Record", "nav_team": "Team", "nav_contact": "Contact", "nav_cta": "Partnership Inquiry", "eyebrow": "TAURUX GROUP — Canada · Quebec", "hero_title": "Building Platforms<br>Bridging Resources<br>Creating Lasting Value", "hero_body": "TAURUX GROUP is a Canada-headquartered industrial ecosystem holding group built for global collaboration. We focus on platform building, resource integration, strategic partnerships, and long-term value creation by connecting talent, capital, brands, businesses, and opportunities.", "hero_note": "We believe that truly valuable companies do not simply operate a single business. They build ecosystems that continuously connect resources, create opportunities, and enable growth.", "hero_dirs": "Hospitality Experience · Private Business Network · Wealth Stewardship · Nonprofit Cross-Industry Collaboration · Education & Talent Development", "hero_btn1": "Explore the Ecosystem", "hero_btn2": "Start a Conversation", "hero_tag": "Building Platforms · Bridging Resources · Creating Lasting Value", "eco_title": "Our Ecosystem", "eco_sub": "A living business ecosystem built through real brands, real scenes, and long-term value.", "hospitality": "Hospitality Experience", "hospitality_body": "Taurux Group’s hospitality foundation is built through real operating experience across dining, entertainment, celebration, events, and client experience. La Nuit Shanghai is a destination for celebrations, private gatherings, corporate events, business events, and immersive dining experiences. Mitsuki is a mature restaurant brand serving the broader consumer market, including family dining, friends’ gatherings, team meals, and everyday leisure occasions.", "visit_lns": "Visit La Nuit Shanghai", "visit_mitsuki": "Visit Mitsuki", "image_pending": "Official brand image slot", "club": "Taurux Private Business Club", "club_tag": "High-quality relationships create high-quality opportunities.", "club_body": "A private business connection platform for entrepreneurs, investors, industry leaders, and high-level professionals. Real business cooperation is built on trust, discretion, shared values, and long-term relationships.", "partnership": "Partnership Inquiry", "gtj": "GTJ Wealth Stewardship", "gtj_tag": "Protect wealth. Plan the future. Preserve value.", "gtj_body": "GTJ Wealth Stewardship is the wealth stewardship and long-term planning pillar within the ecosystem, serving entrepreneurs, high-net-worth families, and long-term asset holders. Services are provided by licensed professionals in accordance with applicable laws and regulations; where tax, financing, investment management, or other specialized matters are involved, support may be coordinated with appropriately qualified professionals or registered institutions.", "learn_more": "Learn More", "synera": "Synera", "synera_tag": "A nonprofit cross-industry collaboration platform", "synera_body": "Synera is a registered nonprofit cross-industry collaboration platform dedicated to connecting businesses, chambers of commerce, entrepreneurs, professionals, educational institutions, social organizations, and international resources.", "visit_synera": "Visit Synera", "edu": "Education & Talent Development", "edu_tag": "Education develops talent. Talent builds the future.", "edu_body": "Taurux Group supports education and talent development through bilingual education, vocational training, professional skills, language development, and long-term talent growth. Education-related resources on Montreal’s South Shore are authorized to offer ACS and DVS-related programs; the specific institution name is not published on this website.", "edu_inq": "Education Inquiry", "global_title": "Connecting Canada, China, and Global Opportunities", "global_body": "TAURUX GROUP is rooted in Canada, deeply connected to the Quebec market, and positioned to connect China and international business resources. Our goal is not simply to introduce resources, but to help them build trust, form partnerships, and create long-term value.", "canada": "Canada · Quebec", "canada_body": "Deep local operating foundation and business relationships.", "china": "Connected to China", "china_body": "Connecting market energy, entrepreneurial resources, and cross-cultural opportunities.", "global": "Global Outlook", "global_body2": "Integrating resources through an international perspective for long-term growth.", "record_title": "Real Operating Record", "record_sub": "Built on real operating experience, not promises.", "record_body": "The ecosystem has grown through real projects, real clients, long-term partnerships, and sustained operations.", "r1": "years in hospitality, dining, and entertainment experience", "r2": "years of Mitsuki mature restaurant brand operating foundation", "r3": "years of GTJ Wealth Stewardship professional development", "r4": "years building La Nuit Shanghai", "r5": "guests celebrating special occasions at La Nuit Shanghai", "r6": "corporate and business events served", "values_title": "Core Values", "v1": "Integrity", "v1b": "Trust is the foundation of every partnership. We stand for truth, transparency, stability, and long-term thinking.", "v2": "Collaboration", "v2b": "Real value is often created through the connection and alignment of resources.", "v3": "Excellence", "v3b": "From brand experience to professional service, we pursue higher standards.", "v4": "Innovation", "v4b": "We connect people, businesses, resources, and opportunities in new ways.", "v5": "Impact", "v5b": "We seek to create business value, talent value, community value, and social impact.", "team_title": "Leadership & Core Team", "team_sub": "The people behind the ecosystem make long-term execution possible.", "resp": "Responsibilities", "badge": "AGA Brossard — Board Director", "contact_title": "Let’s create lasting value together.", "contact_body": "Connect with us to begin a partnership conversation.", "name": "Name", "company": "Company", "email": "Email", "phone": "Phone", "message": "Message", "submit": "Submit Inquiry", "footer_privacy": "Privacy Policy", "footer_legal": "Legal Notice", "footer_rights": "© 2026 Taurux Group. All rights reserved."}, "fr": {"nav_about": "À propos", "nav_eco": "Écosystème", "nav_global": "Portée mondiale", "nav_record": "Parcours réel", "nav_team": "Équipe", "nav_contact": "Contact", "nav_cta": "Demande de partenariat", "eyebrow": "TAURUX GROUP — Canada · Québec", "hero_title": "Créer des plateformes<br>Relier les ressources<br>Bâtir une valeur durable", "hero_body": "TAURUX GROUP est une société de portefeuille écosystémique établie au Canada et tournée vers la collaboration internationale. Nous misons sur la création de plateformes, l’intégration des ressources, les partenariats stratégiques et la création de valeur durable en reliant talents, capitaux, marques, entreprises et occasions d’affaires.", "hero_note": "Nous croyons qu’une entreprise réellement porteuse de valeur ne se limite pas à exploiter une seule activité. Elle bâtit un écosystème capable de relier les ressources, de créer des occasions et de soutenir la croissance.", "hero_dirs": "Expériences en hospitalité · Réseau d’affaires privé · Accompagnement patrimonial · Collaboration intersectorielle sans but lucratif · Éducation et développement des talents", "hero_btn1": "Découvrir l’écosystème", "hero_btn2": "Ouvrir une discussion", "hero_tag": "Building Platforms · Bridging Resources · Creating Lasting Value", "eco_title": "Notre écosystème", "eco_sub": "Un écosystème vivant construit à partir de marques réelles, de contextes réels et de valeur durable.", "hospitality": "Expériences en hospitalité", "hospitality_body": "L’assise hospitalité de Taurux Group repose sur une expérience réelle en restauration, divertissement, célébrations, événements et expérience client. La Nuit Shanghai est une destination pour les célébrations, les rassemblements privés, les événements corporatifs, les événements d’affaires et les expériences culinaires immersives. Mitsuki est une marque de restauration mature destinée au marché grand public.", "visit_lns": "Visiter La Nuit Shanghai", "visit_mitsuki": "Visiter Mitsuki", "image_pending": "Emplacement pour visuel officiel", "club": "Taurux Private Business Club", "club_tag": "Des relations de qualité créent des occasions de qualité.", "club_body": "Une plateforme privée de connexion d’affaires pour entrepreneurs, investisseurs, leaders sectoriels et professionnels de haut niveau. La vraie coopération d’affaires se construit sur la confiance, la discrétion, les valeurs partagées et les relations à long terme.", "partnership": "Demande de partenariat", "gtj": "GTJ Wealth Stewardship", "gtj_tag": "Protéger le patrimoine. Planifier l’avenir. Préserver la valeur.", "gtj_body": "GTJ Wealth Stewardship est le pilier d’accompagnement patrimonial et de planification à long terme au sein de l’écosystème. Les services sont offerts par des professionnels dûment autorisés, conformément aux lois et règlements applicables. Lorsque des enjeux fiscaux, de financement, de gestion des investissements ou d’autres domaines spécialisés sont concernés, un soutien peut être coordonné avec des professionnels qualifiés ou des institutions enregistrées.", "learn_more": "En savoir plus", "synera": "Synera", "synera_tag": "Une plateforme sans but lucratif de collaboration intersectorielle", "synera_body": "Synera est une plateforme enregistrée sans but lucratif dédiée à la collaboration intersectorielle, reliant entreprises, chambres de commerce, entrepreneurs, professionnels, établissements d’enseignement, organismes sociaux et ressources internationales.", "visit_synera": "Visiter Synera", "edu": "Éducation et développement des talents", "edu_tag": "L’éducation forme les talents. Les talents bâtissent l’avenir.", "edu_body": "Taurux Group soutient l’éducation et le développement des talents à travers l’éducation bilingue, la formation professionnelle, le développement des compétences, l’apprentissage linguistique et la croissance à long terme des talents. Les ressources éducatives situées sur la Rive-Sud de Montréal disposent d’autorisations liées aux programmes ACS et DVS; le nom de l’institution n’est pas publié sur ce site.", "edu_inq": "Demande en éducation", "global_title": "Relier le Canada, la Chine et les occasions internationales", "global_body": "TAURUX GROUP est enraciné au Canada, profondément lié au marché québécois, et positionné pour relier la Chine et les ressources d’affaires internationales. Notre objectif n’est pas simplement de présenter des ressources, mais de favoriser la confiance, la collaboration et la création de valeur durable.", "canada": "Canada · Québec", "canada_body": "Une base opérationnelle locale et des relations d’affaires établies.", "china": "Lien avec la Chine", "china_body": "Relier l’énergie du marché, les ressources entrepreneuriales et les occasions interculturelles.", "global": "Ouverture internationale", "global_body2": "Intégrer les ressources avec une vision internationale pour soutenir la croissance à long terme.", "record_title": "Parcours réel", "record_sub": "Fondé sur une expérience opérationnelle réelle, et non sur des promesses.", "record_body": "L’écosystème s’est construit à partir de projets réels, de clients réels, de partenariats à long terme et d’opérations soutenues.", "record_group_1": "Expérience opérationnelle", "record_group_2": "Clients réels et événements", "team_leadership": "Leadership", "team_key": "Équipe clé", "r1": "ans d’expérience en restauration, hospitalité et divertissement", "r2": "ans de fondation opérationnelle de la marque Mitsuki", "r3": "ans de développement professionnel chez GTJ Wealth Stewardship", "r4": "ans de développement de La Nuit Shanghai", "r5": "invités ayant célébré des moments spéciaux à La Nuit Shanghai", "r6": "événements corporatifs et d’affaires servis", "values_title": "Valeurs fondamentales", "v1": "Intégrité", "v1b": "La confiance est la base de toute collaboration. Nous misons sur la vérité, la transparence, la stabilité et la vision à long terme.", "v2": "Collaboration", "v2b": "La vraie valeur naît souvent de la connexion et de la coordination des ressources.", "v3": "Excellence", "v3b": "De l’expérience de marque aux services professionnels, nous visons des standards élevés.", "v4": "Innovation", "v4b": "Nous relions personnes, entreprises, ressources et occasions de nouvelles façons.", "v5": "Impact", "v5b": "Nous voulons créer de la valeur commerciale, humaine, communautaire et sociale.", "team_title": "Leadership et équipe clé", "team_sub": "Les personnes derrière l’écosystème rendent possible l’exécution à long terme.", "resp": "Responsabilités", "badge": "AGA Brossard — Administrateur", "contact_title": "Créons ensemble une valeur durable.", "contact_body": "Communiquez avec nous pour ouvrir une discussion de partenariat.", "name": "Nom", "company": "Entreprise", "email": "Courriel", "phone": "Téléphone", "message": "Message", "submit": "Envoyer la demande", "footer_privacy": "Politique de confidentialité", "footer_legal": "Avis juridique", "footer_rights": "© 2026 Taurux Group. Tous droits réservés."}};
+const I18N = {"zh": {"nav_about": "我们是谁", "nav_eco": "集团生态", "nav_global": "全球连接", "nav_record": "真实积累", "nav_team": "团队", "nav_contact": "联系", "nav_cta": "合作洽询", "eyebrow": "TAURUX GROUP — 加拿大 · 魁北克", "hero_title": "搭建平台<br>连接资源<br>创造长期价值", "hero_body": "TAURUX GROUP 是一家总部位于加拿大、面向全球合作的产业生态控股集团。我们专注于平台建设、资源整合、战略合作与长期价值创造，连接人才、资本、品牌、企业与商业机会。", "hero_note": "我们相信，真正有价值的企业，不只是经营单一业务，而是建立一个能够持续连接资源、创造机会、推动成长的生态平台。", "hero_dirs": "餐饮体验 · 私人商务网络 · 财富守护 · 非营利跨界合作 · 教育与人才发展", "hero_btn1": "了解业务生态", "hero_btn2": "洽谈合作", "hero_tag": "Building Platforms · Bridging Resources · Creating Lasting Value", "eco_title": "集团生态", "eco_sub": "一个正在生长的产业生态，连接真实品牌、真实场景与长期价值。", "hospitality": "高端餐饮与体验服务", "hospitality_body": "Taurux Group 的 hospitality 基础来自真实餐饮、娱乐、庆祝、活动与客户体验运营。La Nuit Shanghai 是庆祝日目的地，承办私人聚会、企业活动、商务活动与沉浸式餐饮体验；Mitsuki 是面向大众消费市场的成熟餐饮品牌，服务家庭聚餐、朋友聚会、团队用餐与日常休闲消费场景。", "visit_lns": "访问 La Nuit Shanghai", "visit_mitsuki": "访问 Mitsuki", "image_pending": "此处预留官方品牌照片位置", "club": "Taurux Private Business Club", "club_tag": "高质量关系，创造高质量机会。", "club_body": "面向企业家、投资人、行业领袖与高端专业人士的私人商务连接平台。商业合作的核心，始终建立在信任、私密性、价值共识与长期关系之上。", "partnership": "合作洽询", "gtj": "GTJ Wealth Stewardship", "gtj_tag": "保护财富，规划未来，传承价值。", "gtj_body": "GTJ Wealth Stewardship 是生态中的财富守护与长期规划板块，服务企业家、高净值家庭与长期资产持有人，关注风险管理、资产保护、家庭保障、企业家财富架构与家族传承。由持牌专业团队根据适用法律法规提供相关服务；涉及税务、投融资、投资管理及其他专业领域时，将协同具备相应资质的专业人士或注册机构提供支持。", "learn_more": "了解更多", "synera": "Synera", "synera_tag": "非营利跨界合作平台", "synera_body": "Synera 是正式注册非营利跨界合作平台，致力于连接企业、商协会、创业者、专业人士、教育机构、社会组织与国际资源。", "visit_synera": "访问 Synera", "edu": "教育与人才发展", "edu_tag": "教育培养人才，人才创造未来。", "edu_body": "Taurux Group 支持教育与人才发展，关注双语教育、职业培训、专业能力建设、语言发展与长期人才成长。相关教育合作资源位于蒙特利尔南岸，具备开展 ACS 与 DVS 项目的授权条件；网站不公开具体学校名称。", "edu_inq": "教育合作咨询", "global_title": "连接加拿大、中国与国际机会", "global_body": "TAURUX GROUP 立足加拿大，深耕魁北克本地市场，同时连接中国与国际商业资源。我们的目标不是简单地介绍资源，而是帮助资源之间建立信任、形成合作，并创造长期价值。", "canada": "加拿大 · 魁北克", "canada_body": "深耕本地商业环境，建立稳定运营基础。", "china": "连接中国", "china_body": "连接市场活力、企业资源与跨文化合作机会。", "global": "面向全球", "global_body2": "以国际化视野整合资源，推动长期增长。", "record_title": "真实积累", "record_sub": "建立在真实运营经验之上，而不是承诺之上。", "record_body": "我们的生态不是概念，而是从实际项目、真实客户、长期合作与持续经营中逐步建立起来的。", "record_group_1": "经营积累", "record_group_2": "真实客户与活动成果", "team_leadership": "领导团队与核心成员", "team_key": "核心成员", "r1": "年餐饮、娱乐与 hospitality 相关经验", "r2": "年 Mitsuki 成熟餐饮品牌运营基础", "r3": "年 GTJ Wealth Stewardship 专业积累", "r4": "年 La Nuit Shanghai 品牌建设", "r5": "位客人在 La Nuit Shanghai 庆祝特别纪念日", "r6": "场企业活动与商务活动", "values_title": "核心价值观", "v1": "诚信为本", "v1b": "信任是一切合作的基础。我们坚持真实、透明、稳健与长期主义。", "v2": "合作共赢", "v2b": "真正的价值往往产生于资源之间的连接与协同。", "v3": "追求卓越", "v3b": "从品牌体验到专业服务，我们始终追求更高标准。", "v4": "持续创新", "v4b": "用新的方式连接人、企业、资源与机会。", "v5": "创造影响力", "v5b": "不只创造商业价值，也创造人才、社区与社会影响力。", "team_title": "领导团队与核心成员", "team_sub": "真实团队，是集团生态持续运转的基础。", "resp": "职责", "badge": "AGA Brossard — Board Director", "contact_title": "让我们一起创造长期价值。", "contact_body": "欢迎与我们联系，开启合作对话。", "name": "姓名 / Name", "company": "公司 / Company", "email": "邮箱 / Email", "phone": "电话 / Phone", "message": "留言 / Message", "submit": "提交咨询", "footer_privacy": "隐私政策", "footer_legal": "法律声明", "footer_rights": "© 2026 Taurux Group. All rights reserved."}, "en": {"nav_about": "About", "nav_eco": "Ecosystem", "nav_global": "Global Reach", "nav_record": "Track Record", "nav_team": "Team", "nav_contact": "Contact", "nav_cta": "Partnership Inquiry", "eyebrow": "TAURUX GROUP — Canada · Quebec", "hero_title": "Building Platforms<br>Bridging Resources<br>Creating Lasting Value", "hero_body": "TAURUX GROUP is a Canada-headquartered industrial ecosystem holding group built for global collaboration. We focus on platform building, resource integration, strategic partnerships, and long-term value creation by connecting talent, capital, brands, businesses, and opportunities.", "hero_note": "We believe that truly valuable companies do not simply operate a single business. They build ecosystems that continuously connect resources, create opportunities, and enable growth.", "hero_dirs": "Hospitality Experience · Private Business Network · Wealth Stewardship · Nonprofit Cross-Industry Collaboration · Education & Talent Development", "hero_btn1": "Explore the Ecosystem", "hero_btn2": "Start a Conversation", "hero_tag": "Building Platforms · Bridging Resources · Creating Lasting Value", "eco_title": "Our Ecosystem", "eco_sub": "A living business ecosystem built through real brands, real scenes, and long-term value.", "hospitality": "Hospitality Experience", "hospitality_body": "Taurux Group’s hospitality foundation is built through real operating experience across dining, entertainment, celebration, events, and client experience. La Nuit Shanghai is a destination for celebrations, private gatherings, corporate events, business events, and immersive dining experiences. Mitsuki is a mature restaurant brand serving the broader consumer market, including family dining, friends’ gatherings, team meals, and everyday leisure occasions.", "visit_lns": "Visit La Nuit Shanghai", "visit_mitsuki": "Visit Mitsuki", "image_pending": "Official brand image slot", "club": "Taurux Private Business Club", "club_tag": "High-quality relationships create high-quality opportunities.", "club_body": "A private business connection platform for entrepreneurs, investors, industry leaders, and high-level professionals. Real business cooperation is built on trust, discretion, shared values, and long-term relationships.", "partnership": "Partnership Inquiry", "gtj": "GTJ Wealth Stewardship", "gtj_tag": "Protect wealth. Plan the future. Preserve value.", "gtj_body": "GTJ Wealth Stewardship is the wealth stewardship and long-term planning pillar within the ecosystem, serving entrepreneurs, high-net-worth families, and long-term asset holders. Services are provided by licensed professionals in accordance with applicable laws and regulations; where tax, financing, investment management, or other specialized matters are involved, support may be coordinated with appropriately qualified professionals or registered institutions.", "learn_more": "Learn More", "synera": "Synera", "synera_tag": "A nonprofit cross-industry collaboration platform", "synera_body": "Synera is a registered nonprofit cross-industry collaboration platform dedicated to connecting businesses, chambers of commerce, entrepreneurs, professionals, educational institutions, social organizations, and international resources.", "visit_synera": "Visit Synera", "edu": "Education & Talent Development", "edu_tag": "Education develops talent. Talent builds the future.", "edu_body": "Taurux Group supports education and talent development through bilingual education, vocational training, professional skills, language development, and long-term talent growth. Education-related resources on Montreal’s South Shore are authorized to offer ACS and DVS-related programs; the specific institution name is not published on this website.", "edu_inq": "Education Inquiry", "global_title": "Connecting Canada, China, and Global Opportunities", "global_body": "TAURUX GROUP is rooted in Canada, deeply connected to the Quebec market, and positioned to connect China and international business resources. Our goal is not simply to introduce resources, but to help them build trust, form partnerships, and create long-term value.", "canada": "Canada · Quebec", "canada_body": "Deep local operating foundation and business relationships.", "china": "Connected to China", "china_body": "Connecting market energy, entrepreneurial resources, and cross-cultural opportunities.", "global": "Global Outlook", "global_body2": "Integrating resources through an international perspective for long-term growth.", "record_title": "Real Operating Record", "record_sub": "Built on real operating experience, not promises.", "record_body": "The ecosystem has grown through real projects, real clients, long-term partnerships, and sustained operations.", "r1": "years in hospitality, dining, and entertainment experience", "r2": "years of Mitsuki mature restaurant brand operating foundation", "r3": "years of GTJ Wealth Stewardship professional development", "r4": "years building La Nuit Shanghai", "r5": "guests celebrating special occasions at La Nuit Shanghai", "r6": "corporate and business events served", "values_title": "Core Values", "v1": "Integrity", "v1b": "Trust is the foundation of every partnership. We stand for truth, transparency, stability, and long-term thinking.", "v2": "Collaboration", "v2b": "Real value is often created through the connection and alignment of resources.", "v3": "Excellence", "v3b": "From brand experience to professional service, we pursue higher standards.", "v4": "Innovation", "v4b": "We connect people, businesses, resources, and opportunities in new ways.", "v5": "Impact", "v5b": "We seek to create business value, talent value, community value, and social impact.", "team_title": "Leadership & Core Team", "team_sub": "The people behind the ecosystem make long-term execution possible.", "resp": "Responsibilities", "badge": "AGA Brossard — Board Director", "contact_title": "Let’s create lasting value together.", "contact_body": "Connect with us to begin a partnership conversation.", "name": "Name", "company": "Company", "email": "Email", "phone": "Phone", "message": "Message", "submit": "Submit Inquiry", "footer_privacy": "Privacy Policy", "footer_legal": "Legal Notice", "footer_rights": "© 2026 Taurux Group. All rights reserved."}, "fr": {"nav_about": "À propos", "nav_eco": "Écosystème", "nav_global": "Portée mondiale", "nav_record": "Parcours réel", "nav_team": "Équipe", "nav_contact": "Contact", "nav_cta": "Demande de partenariat", "eyebrow": "TAURUX GROUP — Canada · Québec", "hero_title": "Créer des plateformes<br>Relier les ressources<br>Bâtir une valeur durable", "hero_body": "TAURUX GROUP est une société de portefeuille écosystémique établie au Canada et tournée vers la collaboration internationale. Nous misons sur la création de plateformes, l’intégration des ressources, les partenariats stratégiques et la création de valeur durable en reliant talents, capitaux, marques, entreprises et occasions d’affaires.", "hero_note": "Nous croyons qu’une entreprise réellement porteuse de valeur ne se limite pas à exploiter une seule activité. Elle bâtit un écosystème capable de relier les ressources, de créer des occasions et de soutenir la croissance.", "hero_dirs": "Expériences en hospitalité · Réseau d’affaires privé · Accompagnement patrimonial · Collaboration intersectorielle sans but lucratif · Éducation et développement des talents", "hero_btn1": "Découvrir l’écosystème", "hero_btn2": "Ouvrir une discussion", "hero_tag": "Building Platforms · Bridging Resources · Creating Lasting Value", "eco_title": "Notre écosystème", "eco_sub": "Un écosystème vivant construit à partir de marques réelles, de contextes réels et de valeur durable.", "hospitality": "Expériences en hospitalité", "hospitality_body": "L’assise hospitalité de Taurux Group repose sur une expérience réelle en restauration, divertissement, célébrations, événements et expérience client. La Nuit Shanghai est une destination pour les célébrations, les rassemblements privés, les événements corporatifs, les événements d’affaires et les expériences culinaires immersives. Mitsuki est une marque de restauration mature destinée au marché grand public.", "visit_lns": "Visiter La Nuit Shanghai", "visit_mitsuki": "Visiter Mitsuki", "image_pending": "Emplacement pour visuel officiel", "club": "Taurux Private Business Club", "club_tag": "Des relations de qualité créent des occasions de qualité.", "club_body": "Une plateforme privée de connexion d’affaires pour entrepreneurs, investisseurs, leaders sectoriels et professionnels de haut niveau. La vraie coopération d’affaires se construit sur la confiance, la discrétion, les valeurs partagées et les relations à long terme.", "partnership": "Demande de partenariat", "gtj": "GTJ Wealth Stewardship", "gtj_tag": "Protéger le patrimoine. Planifier l’avenir. Préserver la valeur.", "gtj_body": "GTJ Wealth Stewardship est le pilier d’accompagnement patrimonial et de planification à long terme au sein de l’écosystème. Les services sont offerts par des professionnels dûment autorisés, conformément aux lois et règlements applicables. Lorsque des enjeux fiscaux, de financement, de gestion des investissements ou d’autres domaines spécialisés sont concernés, un soutien peut être coordonné avec des professionnels qualifiés ou des institutions enregistrées.", "learn_more": "En savoir plus", "synera": "Synera", "synera_tag": "Une plateforme sans but lucratif de collaboration intersectorielle", "synera_body": "Synera est une plateforme enregistrée sans but lucratif dédiée à la collaboration intersectorielle, reliant entreprises, chambres de commerce, entrepreneurs, professionnels, établissements d’enseignement, organismes sociaux et ressources internationales.", "visit_synera": "Visiter Synera", "edu": "Éducation et développement des talents", "edu_tag": "L’éducation forme les talents. Les talents bâtissent l’avenir.", "edu_body": "Taurux Group soutient l’éducation et le développement des talents à travers l’éducation bilingue, la formation professionnelle, le développement des compétences, l’apprentissage linguistique et la croissance à long terme des talents. Les ressources éducatives situées sur la Rive-Sud de Montréal disposent d’autorisations liées aux programmes ACS et DVS; le nom de l’institution n’est pas publié sur ce site.", "edu_inq": "Demande en éducation", "global_title": "Relier le Canada, la Chine et les occasions internationales", "global_body": "TAURUX GROUP est enraciné au Canada, profondément lié au marché québécois, et positionné pour relier la Chine et les ressources d’affaires internationales. Notre objectif n’est pas simplement de présenter des ressources, mais de favoriser la confiance, la collaboration et la création de valeur durable.", "canada": "Canada · Québec", "canada_body": "Une base opérationnelle locale et des relations d’affaires établies.", "china": "Lien avec la Chine", "china_body": "Relier l’énergie du marché, les ressources entrepreneuriales et les occasions interculturelles.", "global": "Ouverture internationale", "global_body2": "Intégrer les ressources avec une vision internationale pour soutenir la croissance à long terme.", "record_title": "Parcours réel", "record_sub": "Fondé sur une expérience opérationnelle réelle, et non sur des promesses.", "record_body": "L’écosystème s’est construit à partir de projets réels, de clients réels, de partenariats à long terme et d’opérations soutenues.", "record_group_1": "Expérience opérationnelle", "record_group_2": "Clients réels et événements", "team_leadership": "Leadership et équipe clé", "team_key": "Équipe clé", "r1": "ans d’expérience en restauration, hospitalité et divertissement", "r2": "ans de fondation opérationnelle de la marque Mitsuki", "r3": "ans de développement professionnel chez GTJ Wealth Stewardship", "r4": "ans de développement de La Nuit Shanghai", "r5": "invités ayant célébré des moments spéciaux à La Nuit Shanghai", "r6": "événements corporatifs et d’affaires servis", "values_title": "Valeurs fondamentales", "v1": "Intégrité", "v1b": "La confiance est la base de toute collaboration. Nous misons sur la vérité, la transparence, la stabilité et la vision à long terme.", "v2": "Collaboration", "v2b": "La vraie valeur naît souvent de la connexion et de la coordination des ressources.", "v3": "Excellence", "v3b": "De l’expérience de marque aux services professionnels, nous visons des standards élevés.", "v4": "Innovation", "v4b": "Nous relions personnes, entreprises, ressources et occasions de nouvelles façons.", "v5": "Impact", "v5b": "Nous voulons créer de la valeur commerciale, humaine, communautaire et sociale.", "team_title": "Leadership et équipe clé", "team_sub": "Les personnes derrière l’écosystème rendent possible l’exécution à long terme.", "resp": "Responsabilités", "badge": "AGA Brossard — Administrateur", "contact_title": "Créons ensemble une valeur durable.", "contact_body": "Communiquez avec nous pour ouvrir une discussion de partenariat.", "name": "Nom", "company": "Entreprise", "email": "Courriel", "phone": "Téléphone", "message": "Message", "submit": "Envoyer la demande", "footer_privacy": "Politique de confidentialité", "footer_legal": "Avis juridique", "footer_rights": "© 2026 Taurux Group. Tous droits réservés."}};
 
 Object.assign(I18N.zh, {
   hero_tag: "搭建平台 · 连接资源 · 创造长期价值",
@@ -662,7 +745,7 @@ Object.assign(I18N.zh, {
   value_innovation: "持续创新",
   value_impact: "创造影响力",
   team_kicker: "团队",
-  team_leadership: "领导层",
+  team_leadership: "领导团队与核心成员",
   team_key: "核心成员",
   title_jacky: "总裁及创始人",
   title_rebecca: "副总裁及联合创始人",
@@ -696,7 +779,7 @@ Object.assign(I18N.en, {
   value_innovation: "Innovation",
   value_impact: "Impact",
   team_kicker: "People",
-  team_leadership: "Leadership",
+  team_leadership: "Leadership & Core Team",
   team_key: "Key Team Members",
   title_jacky: "President & Founder",
   title_rebecca: "Vice President & Co-Founder",
@@ -724,6 +807,7 @@ Object.assign(I18N.fr, {
   value_innovation: "Innovation",
   value_impact: "Impact",
   team_kicker: "Équipe",
+  team_leadership: "Leadership et équipe clé",
   title_jacky: "Président et fondateur",
   title_rebecca: "Vice-présidente et cofondatrice",
   title_pablo: "Directeur général",
@@ -761,8 +845,105 @@ function openPerson(id){const p=PEOPLE[id]; const role=p['role_'+currentLang]||p
 function closeModal(){document.getElementById('modal').classList.remove('open')}
 document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal') closeModal()});
 const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})},{threshold:.12}); document.querySelectorAll('[data-reveal]').forEach(el=>obs.observe(el));
-function initMediaSliders(){const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;document.querySelectorAll('[data-slider]').forEach((slider,sliderIndex)=>{const slides=[...slider.querySelectorAll('img')];if(!slides.length)return;slides.forEach((slide,index)=>slide.classList.toggle('is-active',index===0));if(slides.length<2||reduceMotion)return;let active=0;setTimeout(()=>{setInterval(()=>{slides[active].classList.remove('is-active');active=(active+1)%slides.length;slides[active].classList.add('is-active');},3800);},sliderIndex*450);});}
+function initMediaSliders(){
+  const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('[data-slider]').forEach((slider,sliderIndex)=>{
+    if(slider.querySelector('.media-slider-track')) return;
+    const slides=[...slider.children].filter(el=>el.tagName==='IMG');
+    if(!slides.length) return;
+    const track=document.createElement('div');
+    track.className='media-slider-track';
+    slides.forEach((slide,index)=>{
+      slide.classList.toggle('is-active',index===0);
+      track.appendChild(slide);
+    });
+    if(slides.length>1){
+      const clone=slides[0].cloneNode(true);
+      clone.classList.remove('is-active');
+      clone.setAttribute('aria-hidden','true');
+      track.appendChild(clone);
+    }
+    slider.appendChild(track);
+    if(slides.length<2||reduceMotion) return;
+    let active=0;
+    const slideMs=750;
+    const move=(index,instant=false)=>{
+      track.classList.toggle('is-instant',instant);
+      track.style.transform=`translate3d(${-100*index}%,0,0)`;
+      slides.forEach((slide,slideIndex)=>slide.classList.toggle('is-active',slideIndex===index%slides.length));
+      if(instant){
+        track.offsetHeight;
+        track.classList.remove('is-instant');
+      }
+    };
+    const advance=()=>{
+      active+=1;
+      move(active);
+      if(active===slides.length){
+        window.setTimeout(()=>{active=0;move(0,true);},slideMs);
+      }
+    };
+    window.setTimeout(()=>{advance();window.setInterval(advance,3800);},sliderIndex*450+3800);
+  });
+}
+function initTeamCarousel(){
+  const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('[data-team-carousel]').forEach(carousel=>{
+    const track=carousel.querySelector('.team-track');
+    if(!track||track.dataset.ready==='true') return;
+    const slides=[...track.children];
+    if(!slides.length) return;
+    slides.forEach(slide=>{
+      const clone=slide.cloneNode(true);
+      clone.setAttribute('aria-hidden','true');
+      clone.querySelectorAll('a,button').forEach(el=>{
+        el.setAttribute('tabindex','-1');
+        el.setAttribute('aria-hidden','true');
+      });
+      track.appendChild(clone);
+    });
+    track.dataset.ready='true';
+    let active=0;
+    let step=0;
+    let timer;
+    let paused=false;
+    const transitionMs=500;
+    const syncStep=()=>{
+      const first=track.children[0];
+      const second=track.children[1];
+      step=second?second.offsetLeft-first.offsetLeft:first.getBoundingClientRect().width;
+      track.classList.add('is-instant');
+      track.style.transform=`translate3d(${-active*step}px,0,0)`;
+      track.offsetHeight;
+      track.classList.remove('is-instant');
+    };
+    const move=(index,instant=false)=>{
+      track.classList.toggle('is-instant',instant);
+      track.style.transform=`translate3d(${-index*step}px,0,0)`;
+      if(instant){
+        track.offsetHeight;
+        track.classList.remove('is-instant');
+      }
+    };
+    const advance=()=>{
+      if(paused) return;
+      active+=1;
+      move(active);
+      if(active===slides.length){
+        window.setTimeout(()=>{active=0;move(active,true);},transitionMs);
+      }
+    };
+    syncStep();
+    window.addEventListener('resize',syncStep);
+    carousel.addEventListener('mouseenter',()=>{paused=true;});
+    carousel.addEventListener('mouseleave',()=>{paused=false;});
+    carousel.addEventListener('focusin',()=>{paused=true;});
+    carousel.addEventListener('focusout',()=>{paused=false;});
+    if(!reduceMotion) timer=window.setInterval(advance,3800);
+  });
+}
 initMediaSliders();
+initTeamCarousel();
 setLang('zh');
 </script>
 </body></html>
