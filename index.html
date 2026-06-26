@@ -398,10 +398,10 @@ html[lang="zh"] h1,html[lang="zh"] h2,html[lang="zh"] h3{letter-spacing:.04em;fo
 .cta-small{background:linear-gradient(135deg,#b48a3b,#d6b46a) !important;color:#0a0907 !important;border:1px solid rgba(255,255,255,.12) !important;box-shadow:none !important;}
 .menu{border-color:rgba(247,241,231,.28) !important;}
 .menu span{background:#f7f1e7 !important;}
-.hero h1{font-family:var(--serif) !important;font-weight:500 !important;margin:0;}
-html[lang="en"] .hero h1{font-size:clamp(52px,5.75vw,86px) !important;line-height:1.10 !important;letter-spacing:-.014em !important;}
-html[lang="fr"] .hero h1{font-size:clamp(46px,5.1vw,76px) !important;line-height:1.14 !important;letter-spacing:-.006em !important;}
-html[lang="zh"] .hero h1{font-size:clamp(48px,5.15vw,78px) !important;line-height:1.34 !important;letter-spacing:.055em !important;}
+.hero h1{font-family:var(--serif) !important;font-weight:400 !important;margin:0;text-align:left;}
+html[lang="en"] .hero h1{font-size:clamp(42px,4.6vw,69px) !important;line-height:1.14 !important;letter-spacing:-.010em !important;}
+html[lang="fr"] .hero h1{font-size:clamp(37px,4.1vw,61px) !important;line-height:1.18 !important;letter-spacing:-.004em !important;}
+html[lang="zh"] .hero h1{font-size:clamp(38px,4.1vw,62px) !important;line-height:1.38 !important;letter-spacing:.044em !important;}
 .hero-tagline,.hero-tag,.hero-copy [data-i18n="hero_tag"]{
   font-family:var(--sans) !important;
   font-size:14px !important;
@@ -425,18 +425,21 @@ input,textarea,select{font-family:var(--sans) !important;}
 @media(max-width:640px){
   .nav{height:84px !important;}
   .brand img{height:64px !important;width:auto !important;}
-  html[lang="en"] .hero h1{font-size:40px !important;line-height:1.16 !important;}
-  html[lang="fr"] .hero h1{font-size:34px !important;line-height:1.22 !important;}
-  html[lang="zh"] .hero h1{font-size:40px !important;line-height:1.38 !important;letter-spacing:.048em !important;}
+  html[lang="en"] .hero h1{font-size:32px !important;line-height:1.2 !important;}
+  html[lang="fr"] .hero h1{font-size:28px !important;line-height:1.26 !important;}
+  html[lang="zh"] .hero h1{font-size:32px !important;line-height:1.44 !important;letter-spacing:.04em !important;}
   .section-head{margin-bottom:52px !important;}
 }
 
 /* V7.4 compact hero, vertical ecosystem media cards, simplified record row */
 .hero{padding:92px 0 54px !important;}
 .hero-grid{display:block !important;}
-.hero-copy{max-width:940px;padding:18px 0 20px !important;}
+.hero-copy{max-width:940px;padding:18px 0 20px !important;text-align:left;}
+.hero-copy .eyebrow{text-align:left;}
 .hero-copy .lead,.hero-note{max-width:820px !important;}
+.hero-note{border-left:2px solid var(--gold) !important;padding-left:20px !important;}
 .hero-dirs{max-width:860px;}
+.hero .btns{justify-content:flex-start;}
 .eco-layout,.eco-grid{align-items:stretch;}
 .ecosystem-card{
   display:flex;
@@ -465,6 +468,7 @@ input,textarea,select{font-family:var(--sans) !important;}
   object-fit:cover;
   filter:saturate(.9) contrast(1.04);
 }
+.education-slider img{object-position:50% 12%;}
 .media-slider img{
   flex:0 0 100%;
   min-width:100%;
@@ -521,15 +525,19 @@ input,textarea,select{font-family:var(--sans) !important;}
 .media-placeholder span{font-family:var(--serif);font-size:clamp(28px,3vw,46px);line-height:1.15;}
 .media-placeholder small{font-family:var(--sans);font-size:14px;color:#cbb780;}
 .ecosystem-content{
-  flex:1;
+  flex:0 0 auto;
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
-  gap:26px;
-  padding:42px;
+  justify-content:flex-start;
+  gap:14px;
+  padding:34px 42px 36px;
 }
-.ecosystem-content .eyebrow{margin-bottom:18px;}
-.ecosystem-content h3{margin-bottom:20px;}
+.ecosystem-content .eyebrow{margin-bottom:14px;}
+.ecosystem-content h3{margin-bottom:14px;}
+.ecosystem-content p{margin-top:0;margin-bottom:12px;}
+.ecosystem-content p:last-child{margin-bottom:0;}
+.ecosystem-content .brand-pair{margin-top:10px;}
+.ecosystem-content > .small-link{margin-top:4px;}
 .record-row.combined{grid-template-columns:repeat(3,minmax(0,1fr));}
 .record-row.combined .stat .num{font-size:clamp(60px,6vw,96px);}
 .global-section .global-grid{grid-template-columns:1fr;max-width:920px;}
@@ -582,7 +590,8 @@ input,textarea,select{font-family:var(--sans) !important;}
   padding:28px;
 }
 .team-carousel .lead-info p:last-child,
-.team-carousel .info .small-link{margin-top:auto;}
+.team-carousel .info .small-link{margin-top:18px;}
+.team-carousel .lead-info p:last-child{margin-bottom:0;}
 .team-carousel .lead-card p,
 .team-carousel .person p{font-size:14px;line-height:1.7;}
 @media(prefers-reduced-motion:reduce){
@@ -599,14 +608,14 @@ input,textarea,select{font-family:var(--sans) !important;}
 @media(max-width:640px){
   .hero{padding:64px 0 36px !important;}
   .ecosystem-media,.eco-layout .ecosystem-media{height:260px;}
-  .ecosystem-content{padding:28px;}
+  .ecosystem-content{gap:12px;padding:24px;}
   .brand-pair{grid-template-columns:1fr;}
   .brand-pair a{border-right:0;border-bottom:1px solid var(--line);padding:18px 0;}
   .brand-pair a:last-child{border-bottom:0;padding-left:0;}
   .record-row.combined{grid-template-columns:1fr;}
   .team-carousel{--team-card-width:100%;}
   .team-carousel .lead-info,
-  .team-carousel .info{padding:24px;}
+  .team-carousel .info{padding:22px 24px 24px;}
 }
 </style>
 </head>
@@ -663,7 +672,7 @@ input,textarea,select{font-family:var(--sans) !important;}
     <div class="eco-grid">
       <article class="ecosystem-card dark-card" data-reveal><div class="ecosystem-media logo-media"><img src="taurux_v7_redesign_assets/gtj/gtj_logo.png" alt="GTJ Wealth Stewardship"></div><div class="ecosystem-content"><div><div class="eyebrow" data-i18n="gtj_kicker">财富守护</div><h3 data-i18n="gtj">GTJ Wealth Stewardship</h3><p class="gold-title" data-i18n="gtj_tag">保护财富，规划未来，传承价值。</p><p data-i18n="gtj_body">GTJ Wealth Stewardship 是生态中的财富守护与长期规划板块。</p></div><a class="small-link" href="#contact" data-i18n="learn_more">了解更多 →</a></div></article>
       <article class="ecosystem-card dark-card" data-reveal><div class="ecosystem-media media-slider" data-slider><img class="is-active" src="taurux_v7_redesign_assets/synera/Image_20260623182316_365_270.jpg" alt="Synera collaboration event"><img src="taurux_v7_redesign_assets/synera/Image_20260623182317_366_270.jpg" alt="Synera cross-industry forum"></div><div class="ecosystem-content"><div><div class="eyebrow" data-i18n="synera_kicker">非营利跨界合作</div><h3 data-i18n="synera">Synera</h3><p class="gold-title" data-i18n="synera_tag">非营利跨界合作平台</p><p data-i18n="synera_body">Synera 是正式注册非营利跨界合作平台。</p></div><a class="small-link" href="https://syneracross.org" target="_blank" rel="noopener noreferrer" data-i18n="visit_synera">访问 Synera →</a></div></article>
-      <article class="ecosystem-card wide-card" data-reveal><div class="ecosystem-media media-slider" data-slider><img class="is-active" src="taurux_v7_redesign_assets/education/Image_20260623182704_369_270.jpg" alt="Education and talent development"><img src="taurux_v7_redesign_assets/education/Image_20260623182705_370_270.jpg" alt="Education program setting"><img src="taurux_v7_redesign_assets/education/Image_20260623182706_371_270.jpg" alt="Professional training environment"><img src="taurux_v7_redesign_assets/education/Image_20260623182709_372_270.jpg" alt="Bilingual education setting"><img src="taurux_v7_redesign_assets/education/Image_20260623182710_373_270.jpg" alt="Student development program"><img src="taurux_v7_redesign_assets/education/Image_20260623182711_374_270.jpg" alt="Talent development resources"></div><div class="ecosystem-content"><div><div class="eyebrow" data-i18n="edu_kicker">教育与人才发展</div><h3 data-i18n="edu">教育与人才发展</h3><p class="gold-title" data-i18n="edu_tag">教育培养人才，人才创造未来。</p><p data-i18n="edu_body">Taurux Group 支持教育与人才发展，关注双语教育、职业培训、专业能力建设、语言发展与长期人才成长。</p></div><a class="small-link" href="#contact" data-i18n="edu_inq">教育合作咨询 →</a></div></article>
+      <article class="ecosystem-card wide-card" data-reveal><div class="ecosystem-media media-slider education-slider" data-slider><img class="is-active" src="taurux_v7_redesign_assets/education/Image_20260623182704_369_270.jpg" alt="Education and talent development"><img src="taurux_v7_redesign_assets/education/Image_20260623182705_370_270.jpg" alt="Education program setting"><img src="taurux_v7_redesign_assets/education/Image_20260623182706_371_270.jpg" alt="Professional training environment"><img src="taurux_v7_redesign_assets/education/Image_20260623182709_372_270.jpg" alt="Bilingual education setting"><img src="taurux_v7_redesign_assets/education/Image_20260623182710_373_270.jpg" alt="Student development program"></div><div class="ecosystem-content"><div><div class="eyebrow" data-i18n="edu_kicker">教育与人才发展</div><h3 data-i18n="edu">教育与人才发展</h3><p class="gold-title" data-i18n="edu_tag">教育培养人才，人才创造未来。</p><p data-i18n="edu_body">Taurux Group 支持教育与人才发展，关注双语教育、职业培训、专业能力建设、语言发展与长期人才成长。</p></div><a class="small-link" href="#contact" data-i18n="edu_inq">教育合作咨询 →</a></div></article>
     </div>
   </div>
 </section>
@@ -698,12 +707,12 @@ input,textarea,select{font-family:var(--sans) !important;}
   <div class="team-block-title" data-i18n="team_leadership">Leadership & Core Team</div>
   <div class="team-carousel" data-team-carousel data-reveal>
     <div class="team-track">
-      <article class="lead-card"><img src="taurux_v7_redesign_assets/team/team_jacky.jpg" alt="Jacky Lin"><div class="lead-info"><div class="role" data-i18n="title_jacky">总裁及创始人</div><h4>Jacky Lin</h4><p class="resp-text" data-zh="战略方向 · 商业发展 · 合作关系 · 餐饮体验业务成长 · 中加资源连接" data-en="Strategic direction · Business development · Partnership building · Hospitality growth · Canada–China resource connection" data-fr="Orientation stratégique · Développement d’affaires · Partenariats · Croissance en hospitalité · Connexion Canada–Chine">战略方向 · 商业发展 · 合作关系 · 餐饮体验业务成长 · 中加资源连接</p><p><a class="small-link" href="#" onclick="openPerson('jacky');return false;" data-i18n="learn_more">了解更多 →</a></p></div></article>
-      <article class="lead-card"><img src="taurux_v7_redesign_assets/team/team_rebecca.png" alt="Rebecca Li"><div class="lead-info"><div class="role" data-i18n="title_rebecca">副总裁及联合创始人</div><h4>Rebecca Li</h4><p class="resp-text" data-zh="集团执行 · 战略规划 · 财富守护 · 治理 · 合作跟进 · 长期价值发展" data-en="Group execution · Strategic planning · Wealth stewardship · Governance · Partnership follow-up · Long-term value development" data-fr="Exécution du groupe · Planification stratégique · Accompagnement patrimonial · Gouvernance · Suivi des partenariats · Développement de valeur durable">集团执行 · 战略规划 · 财富守护 · 治理 · 合作跟进 · 长期价值发展</p><p><a class="small-link" href="#" onclick="openPerson('rebecca');return false;" data-i18n="learn_more">了解更多 →</a></p></div></article>
-      <article class="person"><img src="taurux_v7_redesign_assets/team/team_pablo.jpg" alt="Pablo Derbez"><div class="info"><div class="role" data-i18n="title_pablo">总经理</div><h4>Pablo Derbez</h4><p class="resp-text" data-zh="日常运营 · 团队协调 · 场地准备 · 活动落地 · 客户体验一致性" data-en="Daily operations · Team coordination · Venue readiness · Event delivery · Guest experience consistency" data-fr="Opérations quotidiennes · Coordination d’équipe · Préparation des lieux · Exécution d’événements · Cohérence de l’expérience client">日常运营 · 团队协调 · 场地准备 · 活动落地 · 客户体验一致性</p><a class="small-link" href="#" onclick="openPerson('pablo');return false;" data-i18n="learn_more">了解更多 →</a></div></article>
-      <article class="person"><img src="taurux_v7_redesign_assets/team/team_rim.jpg" alt="Rim Bahadi"><div class="info"><div class="role" data-i18n="title_rim">客户服务经理</div><h4>Rim Bahadi</h4><p class="resp-text" data-zh="客户沟通 · 宾客关系 · 服务标准 · 活动支持 · 体验跟进" data-en="Client communication · Guest relations · Service standards · Event support · Experience follow-up" data-fr="Communication client · Relations invités · Standards de service · Soutien aux événements · Suivi de l’expérience">客户沟通 · 宾客关系 · 服务标准 · 活动支持 · 体验跟进</p><a class="small-link" href="#" onclick="openPerson('rim');return false;" data-i18n="learn_more">了解更多 →</a></div></article>
-      <article class="person"><img src="taurux_v7_redesign_assets/team/team_david.jpg" alt="David Lee"><div class="info"><div class="role" data-i18n="title_david">财务总监</div><h4>David Lee</h4><p class="resp-text" data-zh="财务管理 · 预算协调 · 成本控制 · 财务报告 · 内部流程规范" data-en="Financial coordination · Budgeting · Cost control · Reporting · Internal process discipline" data-fr="Coordination financière · Budgétisation · Contrôle des coûts · Rapports · Processus internes">财务管理 · 预算协调 · 成本控制 · 财务报告 · 内部流程规范</p><a class="small-link" href="#" onclick="openPerson('david');return false;" data-i18n="learn_more">了解更多 →</a></div></article>
-      <article class="person"><img src="taurux_v7_redesign_assets/team/team_rafael.jpg" alt="Rafael Jean-Joseph"><div class="info"><div class="role" data-i18n="title_rafael">行政总厨</div><h4>Rafael Jean-Joseph</h4><p class="resp-text" data-zh="餐饮出品 · 菜单研发 · 厨房团队 · 活动餐饮体验 · 品牌出品标准" data-en="Culinary direction · Menu development · Kitchen leadership · Event dining · Brand culinary standards" data-fr="Direction culinaire · Développement de menus · Leadership cuisine · Expérience événementielle · Standards culinaires">餐饮出品 · 菜单研发 · 厨房团队 · 活动餐饮体验 · 品牌出品标准</p><a class="small-link" href="#" onclick="openPerson('rafael');return false;" data-i18n="learn_more">了解更多 →</a></div></article>
+      <article class="lead-card"><img src="taurux_v7_redesign_assets/team/team_jacky.jpg" alt="Jacky Lin"><div class="lead-info"><div class="role" data-i18n="title_jacky">总裁及创始人</div><h4>Jacky Lin</h4><p><a class="small-link" href="#" onclick="openPerson('jacky');return false;" data-i18n="learn_more">了解更多 →</a></p></div></article>
+      <article class="lead-card"><img src="taurux_v7_redesign_assets/team/team_rebecca.png" alt="Rebecca Li"><div class="lead-info"><div class="role" data-i18n="title_rebecca">副总裁及联合创始人</div><h4>Rebecca Li</h4><p><a class="small-link" href="#" onclick="openPerson('rebecca');return false;" data-i18n="learn_more">了解更多 →</a></p></div></article>
+      <article class="person"><img src="taurux_v7_redesign_assets/team/team_pablo.jpg" alt="Pablo Derbez"><div class="info"><div class="role" data-i18n="title_pablo">总经理</div><h4>Pablo Derbez</h4><a class="small-link" href="#" onclick="openPerson('pablo');return false;" data-i18n="learn_more">了解更多 →</a></div></article>
+      <article class="person"><img src="taurux_v7_redesign_assets/team/team_rim.jpg" alt="Rim Bahadi"><div class="info"><div class="role" data-i18n="title_rim">客户服务经理</div><h4>Rim Bahadi</h4><a class="small-link" href="#" onclick="openPerson('rim');return false;" data-i18n="learn_more">了解更多 →</a></div></article>
+      <article class="person"><img src="taurux_v7_redesign_assets/team/team_david.jpg" alt="David Lee"><div class="info"><div class="role" data-i18n="title_david">财务总监</div><h4>David Lee</h4><a class="small-link" href="#" onclick="openPerson('david');return false;" data-i18n="learn_more">了解更多 →</a></div></article>
+      <article class="person"><img src="taurux_v7_redesign_assets/team/team_rafael.jpg" alt="Rafael Jean-Joseph"><div class="info"><div class="role" data-i18n="title_rafael">行政总厨</div><h4>Rafael Jean-Joseph</h4><a class="small-link" href="#" onclick="openPerson('rafael');return false;" data-i18n="learn_more">了解更多 →</a></div></article>
     </div>
   </div>
   </div>
@@ -829,7 +838,7 @@ function updateInquiryOptions(lang){
 const PEOPLE = {"jacky": {"id": "jacky", "img": "taurux_v7_redesign_assets/team/team_jacky.jpg", "name": "Jacky Lin", "title": "President & Founder", "role_zh": "战略方向 · 商业发展 · 合作关系 · Hospitality 成长 · 中加资源连接", "role_en": "Strategic direction · Business development · Partnership building · Hospitality growth · Canada–China resource connection", "role_fr": "Orientation stratégique · Développement d’affaires · Partenariats · Croissance en hospitalité · Connexion Canada–Chine", "lead": true}, "rebecca": {"id": "rebecca", "img": "taurux_v7_redesign_assets/team/team_rebecca.png", "name": "Rebecca Li", "title": "Vice President & Co-Founder", "role_zh": "集团执行 · 战略规划 · 财富守护 · 治理 · 合作跟进 · 长期价值发展", "role_en": "Group execution · Strategic planning · Wealth stewardship · Governance · Partnership follow-up · Long-term value development", "role_fr": "Exécution du groupe · Planification stratégique · Accompagnement patrimonial · Gouvernance · Suivi des partenariats · Développement de valeur durable", "lead": true}, "pablo": {"id": "pablo", "img": "taurux_v7_redesign_assets/team/team_pablo.jpg", "name": "Pablo Derbez", "title": "General Manager", "role_zh": "日常运营 · 团队协调 · 场地准备 · 活动落地 · 客户体验一致性", "role_en": "Daily operations · Team coordination · Venue readiness · Event delivery · Guest experience consistency", "role_fr": "Opérations quotidiennes · Coordination d’équipe · Préparation des lieux · Exécution d’événements · Cohérence de l’expérience client"}, "rim": {"id": "rim", "img": "taurux_v7_redesign_assets/team/team_rim.jpg", "name": "Rim Bahadi", "title": "Customer Service Manager", "role_zh": "客户沟通 · 宾客关系 · 服务标准 · 活动支持 · 体验跟进", "role_en": "Client communication · Guest relations · Service standards · Event support · Experience follow-up", "role_fr": "Communication client · Relations invités · Standards de service · Soutien aux événements · Suivi de l’expérience"}, "david": {"id": "david", "img": "taurux_v7_redesign_assets/team/team_david.jpg", "name": "David Lee", "title": "Finance Director", "role_zh": "财务管理 · 预算协调 · 成本控制 · 财务报告 · 内部流程规范", "role_en": "Financial coordination · Budgeting · Cost control · Reporting · Internal process discipline", "role_fr": "Coordination financière · Budgétisation · Contrôle des coûts · Rapports · Processus internes"}, "rafael": {"id": "rafael", "img": "taurux_v7_redesign_assets/team/team_rafael.jpg", "name": "Rafael Jean-Joseph", "title": "Executive Chef", "role_zh": "餐饮出品 · 菜单研发 · 厨房团队 · 活动餐饮体验 · 品牌出品标准", "role_en": "Culinary direction · Menu development · Kitchen leadership · Event dining · Brand culinary standards", "role_fr": "Direction culinaire · Développement de menus · Leadership cuisine · Expérience événementielle · Standards culinaires"}};
 PEOPLE.jacky.role_zh = "战略方向 · 商业发展 · 合作关系 · 餐饮体验业务成长 · 中加资源连接";
 let currentLang='zh';
-function setLang(lang){ currentLang=lang; document.documentElement.lang=lang; document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n; if(I18N[lang][k]) el.innerHTML=I18N[lang][k];}); document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const k=el.dataset.i18nPlaceholder; if(I18N[lang][k]) el.placeholder=I18N[lang][k];}); document.querySelectorAll('.langs button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang)); document.querySelectorAll('.resp-text').forEach(el=>{el.innerHTML=el.dataset[lang]||el.dataset.zh;}); updateInquiryOptions(lang);}
+function setLang(lang){ currentLang=lang; document.documentElement.lang=lang; document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n; if(I18N[lang][k]) el.innerHTML=I18N[lang][k];}); document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const k=el.dataset.i18nPlaceholder; if(I18N[lang][k]) el.placeholder=I18N[lang][k];}); document.querySelectorAll('.langs button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang)); updateInquiryOptions(lang);}
 document.querySelectorAll('.langs button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
 function openPerson(id){const p=PEOPLE[id]; const role=p['role_'+currentLang]||p.role_zh; const title=I18N[currentLang]['title_'+id]||p.title; const resp=I18N[currentLang].resp; document.getElementById('modalContent').innerHTML=`<div class="role">${title}</div><h2 style="font-size:48px;margin-bottom:16px">${p.name}</h2><p class="lead">${role}</p><hr style="border:0;border-top:1px solid var(--line);margin:24px 0"><p><strong>${resp}</strong></p><p>${role}</p>`; document.getElementById('modal').classList.add('open');}
 function closeModal(){document.getElementById('modal').classList.remove('open')}
