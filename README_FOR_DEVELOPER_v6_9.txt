@@ -21,7 +21,6 @@ What changed in v6.9:
 7. Added production canonical and production OG image path.
 
 Still required before final public launch:
-- Connect the contact form to a live email/CRM endpoint sending submissions to Rebeccali@groupsh.ca.
 - Review Privacy Policy and Legal Notice with a qualified legal/privacy professional if the website will be used as a formal corporate site.
 - Replace Rebeccali@groupsh.ca with a Taurux domain email when available, e.g. info@tauruxgroup.com.
 - Confirm all linked portfolio names and descriptions before launch.
