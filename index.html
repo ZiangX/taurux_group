@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh">
+<html lang="fr">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -656,7 +656,7 @@ input,textarea,select{font-family:var(--sans) !important;}
     <nav class="nav-links">
       <a href="#about" data-i18n="nav_about">我们是谁</a><a href="#ecosystem" data-i18n="nav_eco">集团生态</a><a href="#global" data-i18n="nav_global">全球连接</a><a href="#record" data-i18n="nav_record">真实积累</a><a href="#team" data-i18n="nav_team">团队</a><a href="#contact" data-i18n="nav_contact">联系</a>
     </nav>
-    <div class="nav-actions"><div class="langs"><button data-lang="en">EN</button><span>|</span><button data-lang="fr">FR</button><span>|</span><button data-lang="zh" class="active">中文</button></div><a class="cta-small" href="#contact" data-i18n="nav_cta">合作洽询</a></div>
+    <div class="nav-actions"><div class="langs"><button data-lang="en">EN</button><span>|</span><button data-lang="fr" class="active">FR</button><span>|</span><button data-lang="zh">中文</button></div><a class="cta-small" href="#contact" data-i18n="nav_cta">合作洽询</a></div>
   </div>
 </header>
 <main id="top">
@@ -871,8 +871,8 @@ function updateInquiryOptions(lang){
 
 const PEOPLE = {"jacky": {"id": "jacky", "img": "taurux_v7_redesign_assets/team/team_jacky.jpg", "name": "Jacky Lin", "title": "President & Founder", "role_zh": "战略方向 · 商业发展 · 合作关系 · Hospitality 成长 · 中加资源连接", "role_en": "Strategic direction · Business development · Partnership building · Hospitality growth · Canada–China resource connection", "role_fr": "Orientation stratégique · Développement d’affaires · Partenariats · Croissance en hospitalité · Connexion Canada–Chine", "lead": true}, "rebecca": {"id": "rebecca", "img": "taurux_v7_redesign_assets/team/team_rebecca.png", "name": "Rebecca Li", "title": "Vice President & Co-Founder", "role_zh": "集团执行 · 战略规划 · 财富守护 · 治理 · 合作跟进 · 长期价值发展", "role_en": "Group execution · Strategic planning · Wealth stewardship · Governance · Partnership follow-up · Long-term value development", "role_fr": "Exécution du groupe · Planification stratégique · Accompagnement patrimonial · Gouvernance · Suivi des partenariats · Développement de valeur durable", "lead": true}, "pablo": {"id": "pablo", "img": "taurux_v7_redesign_assets/team/team_pablo.jpg", "name": "Pablo Derbez", "title": "General Manager", "role_zh": "日常运营 · 团队协调 · 场地准备 · 活动落地 · 客户体验一致性", "role_en": "Daily operations · Team coordination · Venue readiness · Event delivery · Guest experience consistency", "role_fr": "Opérations quotidiennes · Coordination d’équipe · Préparation des lieux · Exécution d’événements · Cohérence de l’expérience client"}, "rim": {"id": "rim", "img": "taurux_v7_redesign_assets/team/team_rim.jpg", "name": "Rim Bahadi", "title": "Customer Service Manager", "role_zh": "客户沟通 · 宾客关系 · 服务标准 · 活动支持 · 体验跟进", "role_en": "Client communication · Guest relations · Service standards · Event support · Experience follow-up", "role_fr": "Communication client · Relations invités · Standards de service · Soutien aux événements · Suivi de l’expérience"}, "david": {"id": "david", "img": "taurux_v7_redesign_assets/team/team_david.jpg", "name": "David Lee", "title": "Finance Director", "role_zh": "财务管理 · 预算协调 · 成本控制 · 财务报告 · 内部流程规范", "role_en": "Financial coordination · Budgeting · Cost control · Reporting · Internal process discipline", "role_fr": "Coordination financière · Budgétisation · Contrôle des coûts · Rapports · Processus internes"}, "rafael": {"id": "rafael", "img": "taurux_v7_redesign_assets/team/team_rafael.jpg", "name": "Rafael Jean-Joseph", "title": "Executive Chef", "role_zh": "餐饮出品 · 菜单研发 · 厨房团队 · 活动餐饮体验 · 品牌出品标准", "role_en": "Culinary direction · Menu development · Kitchen leadership · Event dining · Brand culinary standards", "role_fr": "Direction culinaire · Développement de menus · Leadership cuisine · Expérience événementielle · Standards culinaires"}};
 PEOPLE.jacky.role_zh = "战略方向 · 商业发展 · 合作关系 · 餐饮体验业务成长 · 中加资源连接";
-let currentLang='zh';
-function setLang(lang){ currentLang=lang; document.documentElement.lang=lang; document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n; if(I18N[lang][k]) el.innerHTML=I18N[lang][k];}); document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const k=el.dataset.i18nPlaceholder; if(I18N[lang][k]) el.placeholder=I18N[lang][k];}); document.querySelectorAll('.langs button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang)); updateInquiryOptions(lang);}
+let currentLang='fr';
+function setLang(lang){ currentLang=lang; try{localStorage.setItem('taurux_lang',lang);}catch(e){} document.documentElement.lang=lang; document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n; if(I18N[lang][k]) el.innerHTML=I18N[lang][k];}); document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const k=el.dataset.i18nPlaceholder; if(I18N[lang][k]) el.placeholder=I18N[lang][k];}); document.querySelectorAll('.langs button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang)); updateInquiryOptions(lang);}
 document.querySelectorAll('.langs button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
 function openPerson(id){const p=PEOPLE[id]; const role=p['role_'+currentLang]||p.role_zh; const title=I18N[currentLang]['title_'+id]||p.title; const resp=I18N[currentLang].resp; document.getElementById('modalContent').innerHTML=`<div class="role">${title}</div><h2 style="font-size:48px;margin-bottom:16px">${p.name}</h2><p class="lead">${role}</p><hr style="border:0;border-top:1px solid var(--line);margin:24px 0"><p><strong>${resp}</strong></p><p>${role}</p>`; document.getElementById('modal').classList.add('open');}
 function closeModal(){document.getElementById('modal').classList.remove('open')}
@@ -977,6 +977,7 @@ function initTeamCarousel(){
 }
 initMediaSliders();
 initTeamCarousel();
-setLang('zh');
+let savedLang='fr';try{const v=localStorage.getItem('taurux_lang'); if(v&&I18N[v]) savedLang=v;}catch(e){}
+setLang(savedLang);
 </script>
 </body></html>
